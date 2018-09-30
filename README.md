@@ -8,3 +8,12 @@ http://mdecourse.github.io/2018fall/
 設定步驟: https://github.com/scrum-1/scrum-1.github.io/wiki
 
 cpgx 網站: https://cpgx.kmol.info
+
+-------------------------------------------------------------------
+
+我的個人倉儲:https://github.com/40623130
+
+我的個人網站:https://mdecadp2018.github.io/site-40623130/
+
+我的個人Blog:
+https://mdecadp2018.github.io/site-40623130/blog/index.html
