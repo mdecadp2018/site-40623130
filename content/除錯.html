@@ -1,7 +1,8 @@
 <!doctype html>
 <html><head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
-<title>2018 Fall 分組網站</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+<title>計算機程式教材</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+<link rel="icon" href="./../static/favicon.ico" type="image/x-icon" />
 
 <script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
 <script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
@@ -17,6 +18,7 @@
 <link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
+<!-- for LaTeX equations 暫時不用
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
@@ -37,12 +39,22 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
+-->
+<!-- 暫時不用
 <script src="./../static/fengari-web.js"></script>
 <script type="text/javascript" src="./../static/Cango-13v08-min.js"></script>
 <script type="text/javascript" src="./../static/CangoAxes-4v01-min.js"></script>
 <script type="text/javascript" src="./../static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img {
+    border: 3px solid red;
+}
+</style>
 
 <script src="./../static/jquery.js"></script>
 <script type="text/javascript">
@@ -61,16 +73,16 @@ $(function(){
 
 </ul>
 </confmenu></header>
-<div class='container'><nav><ul id='css3menu1' class='topmenu'><li><a href='簡介.html'>簡介</a><ul><li><a href='CMSimfly 網站.html'>CMSimfly 網站</a><li><a href='Reveal 投影片.html'>Reveal 投影片</a><li><a href='Pelican 網誌.html'>Pelican 網誌</a><li><a href='Tools 工具.html'>Tools 工具</a><ul><li><a href='Python 手冊.html'>Python 手冊</a><li><a href='OnShape 手冊.html'>OnShape 手冊</a><li><a href='Fusion 360.html'>Fusion 360</a></li></li></ul></ul><li><a href='Onshape操作影片.html'>Onshape操作影片</a><ul><li><a href='Week1.html'>Week1</a><li><a href='Week2.html'>Week2</a><li><a href='Week3.html'>Week3</a><li><a href='Week4.html'>Week4</a></li></ul><li><a href='Fixing & Improving.html'>Fixing & Improving</a><ul><li><a href='除錯.html'>除錯</a><li><a href='改良.html'>改良</a></li></ul><li><a href='Instruction.html'>Instruction</a><ul><li><a href='Cmd.html'>Cmd</a><li><a href='Git.html'>Git</a></li></ul></nav><section>Fixing & Improving << <a href='Fixing & Improving.html'>Previous</a> <a href='改良.html'>Next</a> >> 改良<br /><h1>除錯</h1>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><li><a href='簡介.html'>簡介</a><ul><li><a href='CMSimfly 網站.html'>CMSimfly 網站</a><li><a href='Reveal 投影片.html'>Reveal 投影片</a><li><a href='Pelican 網誌.html'>Pelican 網誌</a><li><a href='Tools 工具.html'>Tools 工具</a><ul><li><a href='Python 手冊.html'>Python 手冊</a><li><a href='OnShape 手冊.html'>OnShape 手冊</a><li><a href='Fusion 360.html'>Fusion 360</a></li></li></ul></ul><li><a href='Onshape操作影片.html'>Onshape操作影片</a><ul><li><a href='Week1.html'>Week1</a><li><a href='Week2.html'>Week2</a><li><a href='Week3.html'>Week3</a><li><a href='Week4.html'>Week4</a></li></ul><li><a href='Fixing & Improving.html'>Fixing & Improving</a><ul><li><a href='除錯.html'>除錯</a><li><a href='改良.html'>改良</a><li><a href='更新.html'>更新</a></li></ul><li><a href='Instruction.html'>Instruction</a><ul><li><a href='Cmd.html'>Cmd</a><li><a href='Git.html'>Git</a><li><a href='Onshape.html'>Onshape</a></li></ul></nav><section>Fixing & Improving << <a href='Fixing & Improving.html'>Previous</a> <a href='改良.html'>Next</a> >> 改良<br /><h1>除錯</h1>
 <p>資料在合併時有時可能會出現錯誤,這在協同者間很容易發現,以下網址將教你如何遇到衝突:</p>
 <p><a href="http://mde.tw/cp2018/content/Python%20%E6%95%99%E6%9D%90.html">Here</a></p>
 <p>經過文章內的步驟一步一步做下去能發現,資料沒有發生衝突也沒合併,那是因為資料沒有被寫入支內部或是說沒有切換(製作)分支就存取資料,所以在Head的情況下</p>
-<p><img src="./../images/Old branch.png" width="271" height="84" alt=""></p>
+<p><img alt="" height="84" src="./../images/Old branch.png" width="271"/></p>
 <p>如何合併呢?</p>
 <p>只要再新增一個分支並將資料寫入,以ts為新分支</p>
-<p><img src="./../images/Add new branch and make it in.png" width="360" height="237" alt=""></p>
+<p><img alt="" height="237" src="./../images/Add new branch and make it in.png" width="360"/></p>
 <p>並合併這三個分支,很幸運的(?)成功測到衝突了</p>
-<p><img src="./../images/find%20the%20fucking%20%20Bug.png" width="538" height="89" alt="" style="background-color: #ffffff; color: #626262;"></p>
+<p><img alt="" height="89" src="./../images/find%20the%20fucking%20%20Bug.png" style="background-color: #ffffff; color: #626262;" width="538"/></p>
 <p>改一下衝突後,在上推資料,就成功處理完了</p>
-<p><img src="./../images/Fix%20Bug.png" width="451" height="151" alt="" style="background-color: #ffffff; color: #626262;"></p>
+<p><img alt="" height="151" src="./../images/Fix%20Bug.png" style="background-color: #ffffff; color: #626262;" width="451"/></p>
 <br />Fixing & Improving << <a href='Fixing & Improving.html'>Previous</a> <a href='改良.html'>Next</a> >> 改良</section></div></body></html>
