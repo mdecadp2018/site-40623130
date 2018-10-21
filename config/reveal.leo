@@ -128,7 +128,8 @@ vertical: body pane on the botton</t>
 
 ### 虎科大機械設計工程系
 
-####二甲-40623130-陳鉅忠
+二甲-40623130-陳鉅忠
+
 &lt;small&gt;
 Created by [KMOLab](http://lab.kmol.info/)
 &lt;/small&gt;

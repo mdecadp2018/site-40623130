@@ -2,11 +2,11 @@ Title: About
 
 ##2018 Fall 分組網誌
 
-課程倉儲: <a href="https://github.com/mdecourse/2018fall">https://github.com/mdecourse/2018fall</a>
+我的課程倉儲: <a href="https://github.com/mdecadp2018/site-40623130">https://github.com/mdecadp2018/site-40623130</a>
 
-課程投影片: <a href="https://mdecourse.github.io/2018fall/reveal">https://mdecourse.github.io/2018fall/reveal</a>
+我的課程投影片: <a href="https://mdecadp2018.github.io/site-40623130/reveal/index.html#/">https://mdecadp2018.github.io/site-40623130/reveal/index.html#/</a>
 
-課程網誌: <a href="https://mdecourse.github.io/2018fall/blog">https://mdecourse.github.io/2018fall/blog</a>
+我的課程網誌: <a href="https://mdecadp2018.github.io/site-40623130/blog/2018-Fall-Project-Blog.html">https://mdecadp2018.github.io/site-40623130/blog/2018-Fall-Project-Blog.html</a>
 
 
 
