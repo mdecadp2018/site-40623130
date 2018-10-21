@@ -124,15 +124,18 @@ QLineEdit#editorLabel {
 <t tx="leo.20180827201556.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
 <t tx="leo.20180827201621.1"></t>
-<t tx="leo.20180827201621.10">## 2018Fall 分組網際簡報
+<t tx="leo.20180827201621.10">## 電腦輔助設計實習課程簡報
 
 ### 虎科大機械設計工程系
 
+####二甲-40623130-陳鉅忠
 &lt;small&gt;
 Created by [KMOLab](http://lab.kmol.info/)
 &lt;/small&gt;
 
-[2018 Fall 分組網誌](./../blog/index.html)
+[My Blog](./../blog/index.html)
+
+[My Web](./../index.html)
 
 
 </t>
