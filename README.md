@@ -16,4 +16,4 @@ cpgx 網站: https://cpgx.kmol.info
 我的個人網站:https://mdecadp2018.github.io/site-40623130/
 
 我的個人Blog:
-https://mdecadp2018.github.io/site-40623130/blog/index.html
+https://mdecadp2018.github.io/site-40623130/blog
