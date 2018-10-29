@@ -24,10 +24,43 @@
 <v t="leo.20180827201621.9" a="E"><vh>封面投影片</vh>
 <v t="leo.20180827201621.10"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20181029233838.1" a="E"><vh>w1~w3</vh>
+<v t="leo.20181029233841.1" a="E"><vh>w1~w3課程</vh>
+<v t="leo.20181029233841.2"><vh>課程1</vh></v>
+</v>
+<v t="leo.20181029234113.1" a="E"><vh>w1~w3心得</vh>
+<v t="leo.20181029234113.2"><vh>心得1</vh></v>
+</v>
+<v t="leo.20181029234115.1" a="E"><vh>w1~w3筆記</vh>
+<v t="leo.20181029234115.2"><vh>筆記1</vh></v>
+</v>
+</v>
+<v t="leo.20181029234405.1" a="E"><vh>w4~w6</vh>
+<v t="leo.20181029234405.2" a="E"><vh>w4~w6課程</vh>
+<v t="leo.20181029234405.3"><vh>課程2</vh></v>
+</v>
+<v t="leo.20181029234405.4" a="E"><vh>w4~w6心得</vh>
+<v t="leo.20181029234405.5"><vh>心得2</vh></v>
+</v>
+<v t="leo.20181029234405.6" a="E"><vh>w4~w6筆記</vh>
+<v t="leo.20181029234405.7"><vh>筆記2</vh></v>
+</v>
+</v>
+<v t="leo.20181029234406.1" a="E"><vh>w7~w9</vh>
+<v t="leo.20181029234406.2" a="E"><vh>w7~w9課程</vh>
+<v t="leo.20181029234406.3"><vh>課程3</vh></v>
+</v>
+<v t="leo.20181029234406.4" a="E"><vh>w7~w9心得</vh>
+<v t="leo.20181029234406.5"><vh>心得3</vh></v>
+</v>
+<v t="leo.20181029234406.6" a="E"><vh>w7~w9筆記</vh>
+<v t="leo.20181029234406.7"><vh>筆記3</vh></v>
+</v>
+</v>
 <v t="leo.20180827201621.11" a="E"><vh>快捷鍵</vh>
 <v t="leo.20180827201621.12"><vh>投影片快捷鍵</vh></v>
 </v>
-<v t="leo.20180827201621.13"><vh>各式內容引用範例</vh>
+<v t="leo.20180827201621.13" a="E"><vh>各式內容引用範例</vh>
 <v t="leo.20180827201621.14" a="E"><vh>導入數學符號與方程式</vh>
 <v t="leo.20180827201621.15"><vh>LaTeX 格式方程式</vh></v>
 </v>
@@ -166,7 +199,6 @@ Created by [KMOLab](http://lab.kmol.info/)
 </t>
 <t tx="leo.20180827201621.14">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
 @others
     &lt;/script&gt;
 &lt;/section&gt;
@@ -329,6 +361,120 @@ make.start()
 
 
 						
+</t>
+<t tx="leo.20181029233838.1">&lt;section&gt;
+@others
+&lt;/section&gt;</t>
+<t tx="leo.20181029233841.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20181029233841.2">### W1~W3
+</t>
+<t tx="leo.20181029234113.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20181029234113.2">待更新</t>
+<t tx="leo.20181029234115.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20181029234115.2">待更新
+</t>
+<t tx="leo.20181029234405.1">&lt;section&gt;
+@others
+&lt;/section&gt;</t>
+<t tx="leo.20181029234405.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20181029234405.3">### W4~W6
+</t>
+<t tx="leo.20181029234405.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20181029234405.5">待更新
+</t>
+<t tx="leo.20181029234405.6">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20181029234405.7">待更新</t>
+<t tx="leo.20181029234406.1">&lt;section&gt;
+@others
+&lt;/section&gt;</t>
+<t tx="leo.20181029234406.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20181029234406.3">### W7~W9</t>
+<t tx="leo.20181029234406.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20181029234406.5">待更新
+</t>
+<t tx="leo.20181029234406.6">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20181029234406.7">待更新
 </t>
 </tnodes>
 </leo_file>
