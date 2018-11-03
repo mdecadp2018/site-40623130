@@ -2,8 +2,8 @@
   position: relative;
 }
 header{
-  background: #ccc;
-  padding: 20px;
+  background: linear-gradient(to right bottom, rgb(255, 255, 214),rgb(232, 255, 121, 0.93),rgb(101, 255, 127),rgb(0, 205, 255),rgb(42, 148, 230));
+  padding: 35px;
 }
 confmenu
 {
@@ -201,6 +201,11 @@ background-color: white;
 width: 195px;
 }
 body {
-  margin-bottom: 120px;
+  background-image: url("https://media1.tenor.com/images/add0b957c4c48296c961c2021fab517d/tenor.gif?itemid=8371134"),
+  linear-gradient(to right, #ffffff,rgb(227, 242, 255),  #2793e6);
+  margin-bottom: 150px;
+  background-position: top 180px right 180px,top 0px right 0px;
+  background-repeat:no-repeat ;
+  background-attachment : fixed;
 }
 
