@@ -389,12 +389,7 @@ make.start()
 </t>
 <t tx="leo.20181029233841.2">### W1
 
-&lt;img src="https://i.kym-cdn.com/entries/icons/original/000/002/232/bullet_cat.jpg"  height="100" width="200"&gt;
-
-&lt;img src="https://i.kym-cdn.com/entries/icons/original/000/002/232/bullet_cat.jpg"  height="100" width="200"&gt;
-
-&lt;img src="https://i.kym-cdn.com/entries/icons/original/000/002/232/bullet_cat.jpg"  height="100" width="100"&gt;&lt;img src="https://i.kym-cdn.com/entries/icons/original/000/002/232/bullet_cat.jpg"  height="100" width="100"&gt;
-</t>
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw1.png"&gt;</t>
 <t tx="leo.20181029234113.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -405,7 +400,9 @@ make.start()
 
 
 </t>
-<t tx="leo.20181029234113.2">### W2</t>
+<t tx="leo.20181029234113.2">### W2
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw2.png"&gt;</t>
 <t tx="leo.20181029234115.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -416,7 +413,9 @@ make.start()
 
 
 </t>
-<t tx="leo.20181029234115.2">### W3</t>
+<t tx="leo.20181029234115.2">### W3
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw3.png"&gt;</t>
 <t tx="leo.20181029234405.1">&lt;section&gt;
 @others
 						
@@ -434,7 +433,8 @@ make.start()
 						
 </t>
 <t tx="leo.20181029234405.3">### W4
-</t>
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw4.png"&gt;</t>
 <t tx="leo.20181029234405.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -446,7 +446,8 @@ make.start()
 						
 </t>
 <t tx="leo.20181029234405.5">### W5
-</t>
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw5.png"&gt;</t>
 <t tx="leo.20181029234405.6">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -458,7 +459,8 @@ make.start()
 
 </t>
 <t tx="leo.20181029234405.7">### W6
-</t>
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw6.png"&gt;</t>
 <t tx="leo.20181029234406.1">&lt;section&gt;
 @others
 						
@@ -476,7 +478,8 @@ make.start()
 
 </t>
 <t tx="leo.20181029234406.3">### W7
-</t>
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw7.png"&gt;</t>
 <t tx="leo.20181029234406.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -484,7 +487,8 @@ make.start()
     &lt;/script&gt;
 &lt;/section&gt;</t>
 <t tx="leo.20181029234406.5">### W8
-</t>
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw8.png"&gt;</t>
 <t tx="leo.20181029234406.6">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -497,7 +501,8 @@ make.start()
 
 </t>
 <t tx="leo.20181029234406.7">### W9
-</t>
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw9.png"&gt;</t>
 <t tx="leo.20181103220145.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -508,7 +513,11 @@ make.start()
 
 
 </t>
-<t tx="leo.20181103220145.2">待更新</t>
+<t tx="leo.20181103220145.2">###w1~w3
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw1.jpg"  height="250" width="500"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw1-5.jpg"  height="250" width="500"&gt;
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw2.jpg"  height="250" width="500"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw3.jpg"  height="250" width="500"&gt;</t>
 <t tx="leo.20181103220403.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -519,7 +528,9 @@ make.start()
 
 
 </t>
-<t tx="leo.20181103220403.2">待更新</t>
+<t tx="leo.20181103220403.2">###w4~w6
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw4.jpg"  height="250" width="500"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw5.jpg"  height="250" width="500"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw6.jpg"  height="250" width="500"&gt;</t>
 <t tx="leo.20181103220405.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -530,6 +541,8 @@ make.start()
 
 
 </t>
-<t tx="leo.20181103220405.2">待更新</t>
+<t tx="leo.20181103220405.2">###w7~w9
+
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw7.jpg"  height="250" width="500"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw8.jpg"  height="250" width="500"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw9.jpg"  height="250" width="500"&gt;</t>
 </tnodes>
 </leo_file>
