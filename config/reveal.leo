@@ -389,7 +389,7 @@ make.start()
 </t>
 <t tx="leo.20181029233841.2">### W1
 
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw1.png"  height="600" width="800"&gt;
+&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw1.png"  height="550" width="700"&gt;
 
 </t>
 <t tx="leo.20181029234113.1">&lt;section data-markdown&gt;
