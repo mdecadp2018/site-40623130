@@ -201,8 +201,7 @@ background-color: white;
 width: 195px;
 }
 body {
-  background-image: url("https://media1.tenor.com/images/add0b957c4c48296c961c2021fab517d/tenor.gif?itemid=8371134"),
-  linear-gradient(to right, #ffffff,rgb(227, 242, 255),  #2793e6);
+  background-image: linear-gradient(to right, #ffffff,rgb(227, 242, 255),  #2793e6);
   margin-bottom: 150px;
   background-position: top 180px right 180px,top 0px right 0px;
   background-repeat:no-repeat ;
