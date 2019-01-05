@@ -1,4 +1,4 @@
-破撞設定
+碰撞設定
 ===
 ![sphere](./images/15.png "sphere"){width=250px height=250px}
 

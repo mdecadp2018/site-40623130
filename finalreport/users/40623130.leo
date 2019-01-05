@@ -59,7 +59,7 @@
 <v t="leo.20190101193651.2"><vh>物件集合設定</vh></v>
 </v>
 <v t="leo.20190101193648.1" a="E"><vh>@clean impact.md</vh>
-<v t="leo.20190101193648.2"><vh>破撞設定</vh></v>
+<v t="leo.20190101193648.2"><vh>碰撞設定</vh></v>
 </v>
 <v t="leo.20190101194400.1" a="E"><vh>@clean result.md</vh>
 <v t="leo.20190101194400.2"><vh>結論</vh></v>
@@ -485,14 +485,14 @@ Table: 價目表 {#tbl:價目表}
 ===
 @others
 </t>
-<t tx="leo.20190101193619.2">![divide](./images/2.png "divide"){width=250px height=250px}
+<t tx="leo.20190101193619.2">![Divide](./images/2.png "Divide")
 
-先點選要拆解的物件，點選左上的Edit→Grouping\Merging→Divide...這樣就能把物件拆成個別的物件了。
+先點選要拆解的物件，點選左上的Edit→Grouping/Merging→Divide...這樣就能把物件拆成個別的物件了。
 
-![reference-to-world](./images/3.png "reference-to-world"){width=250px height=250px}
+![reference_to_XYZ](./images/3.png "reference_to_XYZ")
 
 選取剛剛拆解的全部物件，點選左上的Edit→Reorient bounding box→with reference of world這樣物件就會全部對齊了。
- 
+
 </t>
 <t tx="leo.20190101193621.1">外觀設定
 ===
@@ -506,7 +506,9 @@ Table: 價目表 {#tbl:價目表}
 
 ![Opacity此選項可使物件成半透明狀，除了顏色還能改變光澤、金屬感等等...
 
- </t>
+ 
+
+</t>
 <t tx="leo.20190101193622.1">加入Joint物件
 ===
 @others
@@ -523,14 +525,16 @@ Table: 價目表 {#tbl:價目表}
 
 可於放大鏡的Visual...調整大小。
 
- </t>
+ 
+
+</t>
 <t tx="leo.20190101193624.1">編排樹狀圖
 ===
 @others
 </t>
 <t tx="leo.20190101193624.2">![tree](./images/9.png "tree"){width=250px height=250px}
 
-調正適當大小後，將左邊的各物件排列成有意義的樹狀圖，由底座排到爪子，過程中可將部分物件結合成一個，點選Edit→Grouping\Merging→Group...就可以結合了，而Ungroup則相反。
+調正適當大小後，將左邊的各物件排列成有意義的樹狀圖，由底座排到爪子，過程中可將部分物件結合成一個，點選Edit→Grouping/Merging→Group...就可以結合了，而Ungroup則相反。
 
 選取兩項物件將先選取的排列至後選取的物件內，可用滑鼠直接拉或是點選上方的Assemble/Disassemble都能排列。
 
@@ -553,8 +557,10 @@ Table: 價目表 {#tbl:價目表}
 
 點選左上的Edit→Make last selected object parent這樣就能設定後選的物件為前選者的父級。
 
- </t>
-<t tx="leo.20190101193648.1">破撞設定
+ 
+
+</t>
+<t tx="leo.20190101193648.1">碰撞設定
 ===
 @others
 </t>
@@ -570,7 +576,9 @@ Table: 價目表 {#tbl:價目表}
 
 設定碰撞方程，點選F(x)的圖示並點選Collection detec→Add new collection object→於Check選單中選擇剛剛設定的紫色物件們的別稱→而against選單中則選擇all other...→按下OK就設定好囉。
 
- </t>
+ 
+
+</t>
 <t tx="leo.20190101193650.1">運動方程設定
 ===
 @others
@@ -583,7 +591,9 @@ Table: 價目表 {#tbl:價目表}
 
 選取全部的joint利用放大境將它們轉成Inverse kinemations mode模式，這樣系統選擇運動的方程式就不會衝突了。
 
- </t>
+ 
+
+</t>
 <t tx="leo.20190101193651.1">物件集合設定
 ===
 @others
@@ -598,7 +608,9 @@ Table: 價目表 {#tbl:價目表}
 
 這樣再選取物件時都會變成選取全部，而基礎就是底座。
 
- </t>
+ 
+
+</t>
 <t tx="leo.20190101194400.1">結論
 ===
 @others
@@ -618,7 +630,11 @@ Table: 價目表 {#tbl:價目表}
 [原圖檔](https://github.com/mdecadp2018/site-40623130/blob/gh-pages/v-rep/secondT/redundantManipulator.stl)
 
 [完成圖檔](https://github.com/mdecadp2018/site-40623130/blob/gh-pages/v-rep/secondT/test-2.ttt)
- </t>
+
+註 : Pandoc轉檔中不能有 "\" backslash
+ 
+
+</t>
 <t tx="leo1.20171221090811.1"></t>
 <t tx="leo1.20171221090839.1"></t>
 <t tx="leo1.20171221090921.1">@language python
@@ -686,7 +702,9 @@ g.es('-'*12)</t>
     (8)物件集合設定
     
     (9)破撞設定
-     </t>
+     
+
+</t>
 <t tx="leo1.20171221091031.11">導入物件
 ===
 @others
@@ -699,7 +717,9 @@ g.es('-'*12)</t>
 
 進入V-rep程式內並點選左上的File→Import→Mesh...後選擇要編譯的stl檔就能好了。
 
- </t>
+ 
+
+</t>
 <t tx="leo1.20171221091031.4"></t>
 <t tx="leo1.20171221091031.5">---
 university_zh: '國立虎尾科技大學'
