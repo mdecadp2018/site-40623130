@@ -38,7 +38,7 @@
 <v t="leo.20181103220145.2"><vh>w1-w3筆</vh></v>
 </v>
 </v>
-<v t="leo.20181029234405.1" a="E"><vh>w4~w6</vh>
+<v t="leo.20181029234405.1"><vh>w4~w6</vh>
 <v t="leo.20181029234405.2" a="E"><vh>w4心得</vh>
 <v t="leo.20181029234405.3"><vh>w4</vh></v>
 </v>
@@ -52,24 +52,38 @@
 <v t="leo.20181103220403.2"><vh>w4-w6筆</vh></v>
 </v>
 </v>
-<v t="leo.20181029234406.1" a="E"><vh>w7~w9</vh>
+<v t="leo.20181029234406.1"><vh>w7~w9</vh>
 <v t="leo.20181029234406.2" a="E"><vh>w7心得</vh>
 <v t="leo.20181029234406.3"><vh>w7</vh></v>
 </v>
-<v t="leo.20181029234406.4" a="E"><vh>w8心得</vh>
+<v t="leo.20181029234406.4"><vh>w8心得</vh>
 <v t="leo.20181029234406.5"><vh>w8</vh></v>
 </v>
-<v t="leo.20181029234406.6" a="E"><vh>期中心得</vh>
+<v t="leo.20181029234406.6"><vh>期中心得</vh>
 <v t="leo.20181029234406.7"><vh>w9</vh></v>
 </v>
-<v t="leo.20181103220405.1" a="E"><vh>w7~w9筆記</vh>
+<v t="leo.20181103220405.1"><vh>w7~w9筆記</vh>
 <v t="leo.20181103220405.2"><vh>w7-w9筆</vh></v>
 </v>
 </v>
-<v t="leo.20180827201621.11" a="E"><vh>快捷鍵</vh>
+<v t="leo.20190111002111.1" a="E"><vh>學習報告</vh>
+<v t="leo.20190111002111.2" a="E"><vh>想法</vh>
+<v t="leo.20190111002111.3"><vh>理想面</vh></v>
+</v>
+<v t="leo.20190111002111.4" a="E"><vh>實際</vh>
+<v t="leo.20190111002111.5"><vh>現實面</vh></v>
+</v>
+<v t="leo.20190111002111.6" a="E"><vh>貢獻</vh>
+<v t="leo.20190111002111.7"><vh>成品</vh></v>
+</v>
+<v t="leo.20190111002111.8" a="E"><vh>期末心得</vh>
+<v t="leo.20190111002111.9"><vh>結尾</vh></v>
+</v>
+</v>
+<v t="leo.20180827201621.11"><vh>快捷鍵</vh>
 <v t="leo.20180827201621.12"><vh>投影片快捷鍵</vh></v>
 </v>
-<v t="leo.20180827201621.13" a="E"><vh>各式內容引用範例</vh>
+<v t="leo.20180827201621.13"><vh>各式內容引用範例</vh>
 <v t="leo.20180827201621.14" a="E"><vh>導入數學符號與方程式</vh>
 <v t="leo.20180827201621.15"><vh>LaTeX 格式方程式</vh></v>
 </v>
@@ -172,9 +186,6 @@ vertical: body pane on the botton</t>
 
 二甲-40623130-陳鉅忠
 
-&lt;small&gt;
-Created by [KMOLab](http://lab.kmol.info/)
-&lt;/small&gt;
 
 [My Blog](./../blog/index.html)
 
@@ -570,5 +581,83 @@ make.start()
 &lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw7.jpg"  height="200" width="400"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw8.jpg"  height="200" width="400"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw9.jpg"  height="200" width="400"&gt;
 
 </t>
+<t tx="leo.20190111002111.1">&lt;section&gt;
+@others
+						
+&lt;/section&gt;
+
+</t>
+<t tx="leo.20190111002111.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190111002111.3">### 想法
+
+* 每天不斷地想進步</t>
+<t tx="leo.20190111002111.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+</t>
+<t tx="leo.20190111002111.5">### 實際
+
+* 過程枯燥乏味
+
+* 碰過不少問題及衝突
+</t>
+<t tx="leo.20190111002111.6">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+
+</t>
+<t tx="leo.20190111002111.7">### 貢獻
+
+* [My Web](./../index.html)
+
+* [Test-Vrep-1](https://mdecadp2018.github.io/finalproject-ag4/content/Test-1.html)、[Test-Vrep2](https://mdecadp2018.github.io/finalproject-ag4/content/Test-2.html)
+
+* [3D-Printer](https://mdecadp2018.github.io/finalproject-ag4/content/3D-Printer.html)
+
+* [製作V-rep的機械手臂大綱簡報](https://mdecadp2018.github.io/finalproject-ag4/finalreport/pdf/report.pdf)
+
+* [Air-jet](https://mdecadp2018.github.io/finalproject-ag4/content/3D-Printer-air_jet.html)
+
+</t>
+<t tx="leo.20190111002111.8">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190111002111.9">###結尾
+
+雖然結果沒有那麼的理想但過程中的經驗都成長一下課的我,
+時間真的過很快已經快到二下了,
+把握好除了娛樂以外的事物或需是目前我們更應該做的事,
+不期望自己有多大的成就或是得到多少好處,
+只希望能從過程中好好思考並改善不太好的因素,
+在之後的課程才更順利的完成。</t>
 </tnodes>
 </leo_file>
