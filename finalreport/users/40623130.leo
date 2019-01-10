@@ -661,15 +661,15 @@ g.es("---Pandoc---")
 chapter_list = " ".join("./paragraph/" + i for i in [
 "introduction.md",
 "import.md", 
-#"demolit.md", 
-#"appearance.md", 
-#"joint.md", 
-#"tree.md", 
-#"dummy.md", 
-#"motion.md", 
-#"collect.md", 
-#"impact.md", 
-#"result.md", 
+"demolit.md", 
+"appearance.md", 
+"joint.md", 
+"tree.md", 
+"dummy.md", 
+"motion.md", 
+"collect.md", 
+"impact.md", 
+"result.md", 
 ])
 
 # 若系統並未正確轉檔, 可以將 os.system 改為 g.es 表示要使用 Leo Editor 的 global 物件中的 echo string 將指令印在 log 區
