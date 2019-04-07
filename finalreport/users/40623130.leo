@@ -1,67 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
 <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
-<leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
-<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
-	<global_window_position top="50" left="50" height="500" width="700"/>
-	<global_log_window_position top="0" left="0" height="0" width="0"/>
-</globals>
+<leo_header file_format="2"/>
+<globals/>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="leo.20171122223841.1" a="E"><vh>@settings</vh>
+<v t="leo.20171122223841.1"><vh>@settings</vh>
 <v t="leo.20171122223841.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="leo.20171122223841.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
-<v t="leo.20171122224051.1" a="E"><vh>有關本專案</vh>
+<v t="leo.20171122224051.1"><vh>有關本專案</vh>
 <v t="leo.20171122224436.1"><vh>PyQt5 官方程式碼</vh></v>
 </v>
 <v t="leo.20171122224218.1"><vh>目錄規劃</vh></v>
 <v t="leo1.20171221090839.1"><vh>Fossil SCM 內容</vh></v>
-<v t="leo1.20171221090811.1" a="E"><vh>期末報告編寫</vh>
+<v t="leo1.20171221090811.1"><vh>期末報告編寫</vh>
 <v t="leo1.20171221090921.1"><vh>@button Report pdf</vh></v>
-<v t="leo1.20171221090954.1" a="E"><vh>@path ./..</vh>
-<v t="leo1.20171221091031.1" a="E"><vh>@path markdown</vh>
+<v t="leo1.20171221090954.1"><vh>@path ./..</vh>
+<v t="leo1.20171221091031.1"><vh>@path markdown</vh>
 <v t="leo1.20171221091031.2"><vh>@edit reference.md</vh></v>
 <v t="leo1.20171221091031.3"><vh>@edit refer.bib</vh></v>
-<v t="leo1.20171221091031.4" a="E"><vh>封面以及摘要</vh>
-<v t="leo1.20171221091031.5" a="E"><vh>@clean cover_and_abstract.md</vh>
+<v t="leo1.20171221091031.4"><vh>封面以及摘要</vh>
+<v t="leo1.20171221091031.5"><vh>@clean cover_and_abstract.md</vh>
 <v t="leo1.20171221091031.6"><vh>摘要</vh></v>
 </v>
 </v>
-<v t="leo1.20171221091031.7" a="E"><vh>各章節內容</vh>
-<v t="leo1.20171221091031.8" a="E"><vh>@path paragraph</vh>
-<v t="leo1.20171221091031.9" a="E"><vh>@clean introduction.md</vh>
+<v t="leo1.20171221091031.7"><vh>各章節內容</vh>
+<v t="leo1.20171221091031.8"><vh>@path paragraph</vh>
+<v t="leo1.20171221091031.9"><vh>@clean introduction.md</vh>
 <v t="leo1.20171221091031.10"><vh>前言內容</vh></v>
 </v>
-<v t="leo1.20171221091031.11" a="E"><vh>@clean import.md</vh>
+<v t="leo1.20171221091031.11"><vh>@clean import.md</vh>
 <v t="leo1.20171221091031.12"><vh>導入物件</vh></v>
 </v>
-<v t="leo.20190101193619.1" a="E"><vh>@clean demolit.md</vh>
+<v t="leo.20190101193619.1"><vh>@clean demolit.md</vh>
 <v t="leo.20190101193619.2"><vh>拆解物件集合</vh></v>
 </v>
-<v t="leo.20190101193621.1" a="E"><vh>@clean appearance.md</vh>
+<v t="leo.20190101193621.1"><vh>@clean appearance.md</vh>
 <v t="leo.20190101193621.2"><vh>外觀設定</vh></v>
 </v>
-<v t="leo.20190101193622.1" a="E"><vh>@clean joint.md</vh>
+<v t="leo.20190101193622.1"><vh>@clean joint.md</vh>
 <v t="leo.20190101193622.2"><vh>加入Joint物件</vh></v>
 </v>
-<v t="leo.20190101193624.1" a="E"><vh>@clean tree.md</vh>
+<v t="leo.20190101193624.1"><vh>@clean tree.md</vh>
 <v t="leo.20190101193624.2"><vh>編排樹狀圖</vh></v>
 </v>
-<v t="leo.20190101193647.1" a="E"><vh>@clean dummy.md</vh>
+<v t="leo.20190101193647.1"><vh>@clean dummy.md</vh>
 <v t="leo.20190101193647.2"><vh>加入Dummy運動物件</vh></v>
 </v>
-<v t="leo.20190101193650.1" a="E"><vh>@clean motion.md</vh>
+<v t="leo.20190101193650.1"><vh>@clean motion.md</vh>
 <v t="leo.20190101193650.2"><vh>運動方程設定</vh></v>
 </v>
-<v t="leo.20190101193651.1" a="E"><vh>@clean collect.md</vh>
+<v t="leo.20190101193651.1"><vh>@clean collect.md</vh>
 <v t="leo.20190101193651.2"><vh>物件集合設定</vh></v>
 </v>
-<v t="leo.20190101193648.1" a="E"><vh>@clean impact.md</vh>
+<v t="leo.20190101193648.1"><vh>@clean impact.md</vh>
 <v t="leo.20190101193648.2"><vh>碰撞設定</vh></v>
 </v>
-<v t="leo.20190101194400.1" a="E"><vh>@clean result.md</vh>
+<v t="leo.20190101194400.1"><vh>@clean result.md</vh>
 <v t="leo.20190101194400.2"><vh>結論</vh></v>
 </v>
 </v>
@@ -70,13 +67,13 @@
 </v>
 </v>
 <v t="leo.20180110233617.1"><vh>Recovered Nodes</vh>
-<v t="leo.20180110233617.2" a="E"><vh>Recovered node "摘要" from @clean cover_and_abstract.md</vh>
+<v t="leo.20180110233617.2"><vh>Recovered node "摘要" from @clean cover_and_abstract.md</vh>
 <v t="leo.20180110233617.3"><vh>old:摘要</vh></v>
 <v t="leo.20180110233617.4"><vh>new:摘要</vh></v>
 </v>
 </v>
 <v t="leo.20180111013609.2"><vh>Recovered Nodes</vh>
-<v t="leo.20180111013609.3" a="E"><vh>Recovered node "計算機程式內容" from @clean calculator.md</vh>
+<v t="leo.20180111013609.3"><vh>Recovered node "計算機程式內容" from @clean calculator.md</vh>
 <v t="leo.20180111013609.4"><vh>old:計算機程式內容</vh></v>
 <v t="leo.20180111013609.5"><vh>new:計算機程式內容</vh></v>
 </v>
@@ -491,7 +488,7 @@ Table: 價目表 {#tbl:價目表}
 
 ![reference_to_XYZ](./images/3.png "reference_to_XYZ")
 
-選取剛剛拆解的全部物件，點選左上的Edit→Reorient bounding box→with reference of world這樣物件就會全部對齊了。
+選取剛剛拆解的全部物件，點選左上的Edit→Reorient bounding box→with reference of world這樣物件們就會全部對齊了。
 
 </t>
 <t tx="leo.20190101193621.1">外觀設定
@@ -675,7 +672,7 @@ chapter_list = " ".join("./paragraph/" + i for i in [
 # 若系統並未正確轉檔, 可以將 os.system 改為 g.es 表示要使用 Leo Editor 的 global 物件中的 echo string 將指令印在 log 區
 # 然後複製指令, 然後在命令列視窗中的 markdown 目錄中執行, 就可以得到錯誤訊息
 # 或許可以再從 https://stackoverflow.com/questions/26005583/return-value-of-x-os-system 中的建議改進此一指令
-g.es(os.system("pandoc cover_and_abstract.md " + chapter_list + " reference.md -o ../pdf/report.pdf {}".format(settingFlag)))
+g.es(os.system("pandoc cover_and_abstract.md " + chapter_list + " reference.md -o ../pdf/report2.pdf {}".format(settingFlag)))
 g.es("pandoc cover_and_abstract.md " + chapter_list + " reference.md -o ../pdf/report.pdf {}".format(settingFlag))
 g.es("PDF 轉換完畢")
 g.es('-'*12)</t>
