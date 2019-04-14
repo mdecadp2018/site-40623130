@@ -404,8 +404,8 @@ make.start()
 
 * 取分項目(3)-ungit使用手冊
 
-&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-1.png"  height="200" width="400"&gt;
-&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-2.png"  height="200" width="400"&gt;</t>
+&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-1.png"  height="170" width="350"&gt;
+&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-2.png"  height="170" width="350"&gt;</t>
 <t tx="leo.20181029234113.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -461,7 +461,7 @@ make.start()
 </t>
 <t tx="leo.20181103220145.2">### 取分項目(1)-隨機分組介面
 
-在3/18號第一次小組會議中分配工作 , 我個人負責任務一
+開小組會議時分配了工作 , 我個人負責任務一
 
 使用大一時學到的Eric6編輯QT , 過程中分三階段
 
@@ -574,7 +574,7 @@ make.start()
 
 [詳細內容](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/week7%E6%B8%AC%E8%A9%A6%E7%89%A9%E4%BB%B6.html)
 
-右方網址為尋找Lua鍵盤設定碼時找到的網址。
+下方網址為尋找Lua鍵盤設定碼時找到的網址。
 [keyboard code of Unicode web](http://www.runoob.com/try/try.php?filename=tryjsref_event_key_keycode)
 
 &lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/2019-04-07_22-37-07.gif"  height="250" width="500"&gt;</t>
@@ -595,7 +595,11 @@ make.start()
 
 [詳細介紹於此網站中](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Final-handball.html)
 
-&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/handball_lag_by_going.png"  height="250" width="500"&gt;</t>
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/handball_lag_by_going.png"  height="250" width="500"&gt;
+
+&lt;small&gt;
+((左下角寫模擬停止中
+&lt;/small&gt;</t>
 <t tx="leo.20190414200641.2">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
