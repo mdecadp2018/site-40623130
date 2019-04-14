@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
 <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
-<leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
-<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
-	<global_window_position top="50" left="50" height="500" width="700"/>
-	<global_log_window_position top="0" left="0" height="0" width="0"/>
-</globals>
+<leo_header file_format="2"/>
+<globals/>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
@@ -13,84 +10,82 @@
 <v t="leo.20180827201556.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="leo.20180827201556.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
-<v t="leo.20180827201621.1" a="E"><vh>編輯 reveal</vh>
-<v t="leo.20180827201621.2" a="E"><vh>@path ./../reveal</vh>
-<v t="leo.20180827201621.3" a="E"><vh>@clean index.html</vh>
-<v t="leo.20180827201621.4" a="E"><vh>html</vh>
+<v t="leo.20180827201621.1"><vh>編輯 reveal</vh>
+<v t="leo.20180827201621.2"><vh>@path ./../reveal</vh>
+<v t="leo.20180827201621.3"><vh>@clean index.html</vh>
+<v t="leo.20180827201621.4"><vh>html</vh>
 <v t="leo.20180827201621.5"><vh>head</vh></v>
-<v t="leo.20180827201621.6" a="E"><vh>body</vh>
-<v t="leo.20180827201621.7" a="E"><vh>reveal div</vh>
-<v t="leo.20180827201621.8" a="E"><vh>slides div</vh>
-<v t="leo.20180827201621.9" a="E"><vh>封面投影片</vh>
+<v t="leo.20180827201621.6"><vh>body</vh>
+<v t="leo.20180827201621.7"><vh>reveal div</vh>
+<v t="leo.20180827201621.8"><vh>slides div</vh>
+<v t="leo.20180827201621.9"><vh>封面投影片</vh>
 <v t="leo.20180827201621.10"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20181029233838.1" a="E"><vh>w1~w3</vh>
-<v t="leo.20181029233841.1" a="E"><vh>w1心得</vh>
-<v t="leo.20181029233841.2"><vh>w1</vh></v>
+<v t="leo.20181029233838.1"><vh>Task-1</vh>
+<v t="leo.20181029233841.1"><vh>Introduce-t1</vh>
+<v t="leo.20181029233841.2"><vh>List-t1</vh></v>
 </v>
-<v t="leo.20181029234113.1" a="E"><vh>w2心得</vh>
-<v t="leo.20181029234113.2"><vh>w2</vh></v>
+<v t="leo.20181029234113.1"><vh>USB-working-systeam</vh>
+<v t="leo.20181029234113.2"><vh>Working-systeam</vh></v>
 </v>
-<v t="leo.20181029234115.1" a="E"><vh>w3心得</vh>
-<v t="leo.20181029234115.2"><vh>w3</vh></v>
+<v t="leo.20181029234115.1"><vh>Ungit</vh>
+<v t="leo.20181029234115.2"><vh>kungit</vh></v>
 </v>
-<v t="leo.20181103220145.1" a="E"><vh>w1~w3筆記</vh>
-<v t="leo.20181103220145.2"><vh>w1-w3筆</vh></v>
+<v t="leo.20181103220145.1"><vh>Ex-Goal-1</vh>
+<v t="leo.20181103220145.2"><vh>Ex-goal-1-1</vh></v>
 </v>
+<v t="leo.20190414233932.1"><vh>Ex-Goal-1.5</vh>
+<v t="leo.20190414233932.3"><vh>Ex-goal-1-1-5</vh></v>
 </v>
-<v t="leo.20181029234405.1"><vh>w4~w6</vh>
-<v t="leo.20181029234405.2" a="E"><vh>w4心得</vh>
-<v t="leo.20181029234405.3"><vh>w4</vh></v>
+<v t="leo.20190414195732.1"><vh>Ex-Goal-2</vh>
+<v t="leo.20190414195732.2"><vh>Ex-goal-1-2</vh></v>
 </v>
-<v t="leo.20181029234405.4" a="E"><vh>w5心得</vh>
-<v t="leo.20181029234405.5"><vh>w5</vh></v>
-</v>
-<v t="leo.20181029234405.6" a="E"><vh>w6心得</vh>
-<v t="leo.20181029234405.7"><vh>w6</vh></v>
-</v>
-<v t="leo.20181103220403.1" a="E"><vh>w4~w6筆記</vh>
-<v t="leo.20181103220403.2"><vh>w4-w6筆</vh></v>
+<v t="leo.20190414200114.1"><vh>Ex-Goal-3</vh>
+<v t="leo.20190414200114.2"><vh>Ex-goal-1-3</vh></v>
 </v>
 </v>
-<v t="leo.20181029234406.1"><vh>w7~w9</vh>
-<v t="leo.20181029234406.2" a="E"><vh>w7心得</vh>
-<v t="leo.20181029234406.3"><vh>w7</vh></v>
+<v t="leo.20190414200641.1"><vh>Task-2</vh>
+<v t="leo.20190414200641.2"><vh>Introduce-t2</vh>
+<v t="leo.20190414200641.3"><vh>List-t2</vh></v>
 </v>
-<v t="leo.20181029234406.4"><vh>w8心得</vh>
-<v t="leo.20181029234406.5"><vh>w8</vh></v>
+<v t="leo.20190414200641.4"><vh>BubbleRob-pdf</vh>
+<v t="leo.20190414200641.5"><vh>BubbleRob</vh></v>
 </v>
-<v t="leo.20181029234406.6"><vh>期中心得</vh>
-<v t="leo.20181029234406.7"><vh>w9</vh></v>
+<v t="leo.20190414200641.6"><vh>Up-Down-Vrep</vh>
+<v t="leo.20190414200641.7"><vh>Left-Right-Vrep</vh></v>
 </v>
-<v t="leo.20181103220405.1"><vh>w7~w9筆記</vh>
-<v t="leo.20181103220405.2"><vh>w7-w9筆</vh></v>
+<v t="leo.20190414200641.8"><vh>Onshape</vh>
+<v t="leo.20190414200641.9"><vh>Onshape-ex</vh></v>
+</v>
+<v t="leo.20190414200641.10"><vh>Simulation</vh>
+<v t="leo.20190414200641.11"><vh>Simulation-vrep</vh></v>
+</v>
+<v t="leo.20190414200641.12"><vh>Import</vh>
+<v t="leo.20190414200641.13"><vh>Final-handball</vh></v>
 </v>
 </v>
-<v t="leo.20190111002111.1" a="E"><vh>學習報告</vh>
-<v t="leo.20190111002111.2" a="E"><vh>想法</vh>
-<v t="leo.20190111002111.3"><vh>理想面</vh></v>
-</v>
-<v t="leo.20190111002111.4" a="E"><vh>實際</vh>
-<v t="leo.20190111002111.5"><vh>現實面</vh></v>
-</v>
-<v t="leo.20190111002111.6" a="E"><vh>貢獻</vh>
+<v t="leo.20190111002111.1"><vh>學習報告</vh>
+<v t="leo.20190111002111.6"><vh>貢獻</vh>
 <v t="leo.20190111002111.7"><vh>成品</vh></v>
 </v>
-<v t="leo.20190111002111.8" a="E"><vh>期末心得</vh>
+<v t="leo.20190111002111.8"><vh>心得</vh>
 <v t="leo.20190111002111.9"><vh>結尾</vh></v>
+</v>
+<v t="leo.20190414233558.1"><vh>心得2</vh>
+<v t="leo.20190414233558.2"><vh>結尾2</vh></v>
 </v>
 </v>
 <v t="leo.20180827201621.11"><vh>快捷鍵</vh>
 <v t="leo.20180827201621.12"><vh>投影片快捷鍵</vh></v>
 </v>
 <v t="leo.20180827201621.13"><vh>各式內容引用範例</vh>
-<v t="leo.20180827201621.14" a="E"><vh>導入數學符號與方程式</vh>
+<v t="leo.20180827201621.14"><vh>導入數學符號與方程式</vh>
 <v t="leo.20180827201621.15"><vh>LaTeX 格式方程式</vh></v>
 </v>
-<v t="leo.20180827201621.16" a="E"><vh>導入縮排程式碼</vh>
+<v t="leo.20180827201621.16"><vh>導入縮排程式碼</vh>
 <v t="leo.20180827201621.17"><vh>引用程式碼</vh></v>
 </v>
-<v t="leo.20180827201621.18" a="E"><vh>導入影片</vh>
+<v t="leo.20180827201621.18"><vh>導入影片</vh>
 <v t="leo.20180827201621.19"><vh>iframe 導入影片</vh></v>
 </v>
 </v>
@@ -180,18 +175,17 @@ QLineEdit#editorLabel {
 <t tx="leo.20180827201556.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
 <t tx="leo.20180827201621.1"></t>
-<t tx="leo.20180827201621.10">## 電腦輔助設計實習課程簡報
+<t tx="leo.20180827201621.10">## 協同產品設計實習課程簡報
 
 ### 虎科大機械設計工程系
 
-二甲-40623130-陳鉅忠
-
-
-[My Blog](./../blog/index.html)
+二甲-第二組-40623130-陳鉅忠
 
 [My Web](./../index.html)
 
+[Our team's Blog](https://cda2019g2.blogspot.com/)
 
+[Our team's Web](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/index.html)
 </t>
 <t tx="leo.20180827201621.11">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -398,11 +392,20 @@ make.start()
 
 						
 </t>
-<t tx="leo.20181029233841.2">### W1
+<t tx="leo.20181029233841.2">### 簡單介紹Task-1
 
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw1.png"  height="550" width="700"&gt;
+* 隨身系統編譯
 
-</t>
+* Ungit
+
+* 取分項目(1)-隨機分組介面
+
+* 取分項目(2)-分組程式修正
+
+* 取分項目(3)-ungit使用手冊
+
+&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-1.png"  height="200" width="400"&gt;
+&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-2.png"  height="200" width="400"&gt;</t>
 <t tx="leo.20181029234113.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -414,9 +417,17 @@ make.start()
 
 
 </t>
-<t tx="leo.20181029234113.2">### W2
+<t tx="leo.20181029234113.2">### 隨身系統編譯
 
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw2.png"&gt;
+自行做一次可攜系統並尋找能用且公開原始碼的程式並嵌入 , 並自行設定start.bat 及 stop.bat。
+
+[詳細內容](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/%E8%87%AA%E5%AE%9A%E7%BE%A9%E9%9A%A8%E8%BA%AB%E7%B3%BB%E7%B5%B1.html)
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/82j82jvYnf4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;small&gt;
+聲音偏小
+&lt;/small&gt;
 </t>
 <t tx="leo.20181029234115.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -429,110 +440,13 @@ make.start()
 
 
 </t>
-<t tx="leo.20181029234115.2">### W3
+<t tx="leo.20181029234115.2">### Ungit
 
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw3.png"&gt;
-</t>
-<t tx="leo.20181029234405.1">&lt;section&gt;
-@others
-						
-&lt;/section&gt;
+詳細安裝步驟及使用於取分項目(3)有 , 雖然多了ungit可方便操作及協同但若改為Ipv6的網路則需要更改設定內容
 
-</t>
-<t tx="leo.20181029234405.2">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
+使用過程中發現proxy設定未完全就會造成無法使用的問題
 
-
-
-						
-</t>
-<t tx="leo.20181029234405.3">### W4
-
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw4.png"&gt;
-
-</t>
-<t tx="leo.20181029234405.4">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
-</t>
-<t tx="leo.20181029234405.5">### W5
-
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw5.png"&gt;
-
-</t>
-<t tx="leo.20181029234405.6">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-
-
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-</t>
-<t tx="leo.20181029234405.7">### W6
-
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw6.png"&gt;
-</t>
-<t tx="leo.20181029234406.1">&lt;section&gt;
-@others
-						
-&lt;/section&gt;
-
-</t>
-<t tx="leo.20181029234406.2">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-
-
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-</t>
-<t tx="leo.20181029234406.3">### W7
-
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw7.png"&gt;
-</t>
-<t tx="leo.20181029234406.4">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-
-
-    &lt;/script&gt;
-&lt;/section&gt;
-
-</t>
-<t tx="leo.20181029234406.5">### W8
-
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw8.png"&gt;
-</t>
-<t tx="leo.20181029234406.6">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-
-
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-
-</t>
-<t tx="leo.20181029234406.7">### W9
-
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Rw9.png"&gt;
+&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-3.png"  height="250" width="500"&gt;
 </t>
 <t tx="leo.20181103220145.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -545,78 +459,24 @@ make.start()
 
 
 </t>
-<t tx="leo.20181103220145.2">### w1~w3
+<t tx="leo.20181103220145.2">### 取分項目(1)-隨機分組介面
 
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw1.jpg"  height="200" width="400"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw1-5.jpg"  height="200" width="400"&gt;
+在3/18號第一次小組會議中分配工作 , 我個人負責任務一
 
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw2.jpg"  height="200" width="400"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw3.jpg"  height="200" width="400"&gt;
-</t>
-<t tx="leo.20181103220403.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
+使用大一時學到的Eric6編輯QT , 過程中分三階段
 
+* 1.拉表單並測試按鍵功能
 
-    &lt;/script&gt;
-&lt;/section&gt;
+* 2.結合任務二被修改過的python程式碼
 
+* 3.完成後轉成.exe檔案 , 這項最麻煩 , 遇到一個語法bug, 之後修改了一個python3.7內部檔案
 
-
-</t>
-<t tx="leo.20181103220403.2">### w4~w6
-
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw4.jpg"  height="200" width="400"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw5.jpg"  height="200" width="400"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw6.jpg"  height="200" width="400"&gt;
-</t>
-<t tx="leo.20181103220405.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-</t>
-<t tx="leo.20181103220405.2">### w7~w9
-
-&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw7.jpg"  height="200" width="400"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw8.jpg"  height="200" width="400"&gt;&lt;img src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/reveal/picture/Bw9.jpg"  height="200" width="400"&gt;
-
-</t>
+[詳細介紹於此網站中](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/%E9%9A%A8%E6%A9%9F%E5%88%86%E7%B5%84%E4%BB%8B%E9%9D%A2%E6%88%90%E5%93%81.html)</t>
 <t tx="leo.20190111002111.1">&lt;section&gt;
 @others
 						
 &lt;/section&gt;
 
-</t>
-<t tx="leo.20190111002111.2">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-
-
-
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-</t>
-<t tx="leo.20190111002111.3">### 想法
-
-* 每天不斷地想進步
-</t>
-<t tx="leo.20190111002111.4">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-
-
-    &lt;/script&gt;
-&lt;/section&gt;
-
-</t>
-<t tx="leo.20190111002111.5">### 實際
-
-* 過程枯燥乏味
-
-* 碰過不少問題及衝突
 </t>
 <t tx="leo.20190111002111.6">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -632,16 +492,17 @@ make.start()
 </t>
 <t tx="leo.20190111002111.7">### 貢獻
 
-* [My Web](./../index.html)
+* [網站寫入](https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g2)
 
-* [Test-Vrep-1](https://mdecadp2018.github.io/finalproject-ag4/content/Test-1.html)、[Test-Vrep2](https://mdecadp2018.github.io/finalproject-ag4/content/Test-2.html)
+* [blog](https://cda2019g2.blogspot.com/)、[及網站的編寫](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/index.html)
 
-* [3D-Printer](https://mdecadp2018.github.io/finalproject-ag4/content/3D-Printer.html)
+* [取分項目研究](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/%E6%88%90%E5%93%81.html)
 
-* [製作V-rep的機械手臂大綱簡報](https://mdecadp2018.github.io/site-40623130/finalreport/pdf/report.pdf)
+* [rob測試](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Vrep-2.html)、[及編入可操控code](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/week7%E6%B8%AC%E8%A9%A6%E7%89%A9%E4%BB%B6.html)
 
-* [Air-jet](https://mdecadp2018.github.io/finalproject-ag4/content/3D-Printer-air_jet.html)
+* [場地設計1](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Onshape.html)、[場地設計2](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Extra-add.html)
 
+* [導入物件至Vrep](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Final-handball.html)
 </t>
 <t tx="leo.20190111002111.8">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -655,13 +516,196 @@ make.start()
 </t>
 <t tx="leo.20190111002111.9">### 結尾
 
-雖然結果沒有那麼的理想但過程中的經驗都成長一下刻的我,
-時間真的過很快已經快到二下了,
-把握好除了娛樂以外的事物或需是目前我們更應該做的事,
-不期望自己有多大的成就或是得到多少好處,
-只希望能從過程中好好思考並改善不太好的因素,
-在之後的課程才能更順利的完成。
+老師週四po到blog的文章 , 我在星期日才知道 , 當下很措手不及其他科也還沒準備好 , 假如平時沒有累積一些東西,期中前一周根本不可能做那麼多 , 相對的就有要重修的可能 , 但即使一個人的能力多好 , 時間還是沒有想像中多 , 所以現在還是以團隊合作為目標 , 就如同文章最後的幾行老師要我們設法在同時推送時處理內容衝突並合併改版一樣。</t>
+<t tx="leo.20190414195732.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
 
 </t>
+<t tx="leo.20190414195732.2">### 取分項目(2)-分組程式修正
+
+此部分由組員修改 
+
+[詳細介紹於此網站中](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/%E5%88%86%E7%B5%84%E7%A8%8B%E5%BC%8F%E4%BF%AE%E6%AD%A3.html)
+
+&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-4.png"  height="250" width="500"&gt;</t>
+<t tx="leo.20190414200114.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190414200114.2">### 取分項目(3)-ungit使用手冊
+
+此部分由其他組員組員編寫
+
+[詳細介紹於此網站中](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/ungit%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8A.html)</t>
+<t tx="leo.20190414200641.1">&lt;section&gt;
+@others
+						
+&lt;/section&gt;
+
+</t>
+<t tx="leo.20190414200641.10">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190414200641.11">### 模擬手足球人形的運動
+
+布置與手足球相似的物件並用方向鍵模擬人形運動 , 雖然尚未加入人形但桿件確實可以運動。
+
+[詳細內容](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/week7%E6%B8%AC%E8%A9%A6%E7%89%A9%E4%BB%B6.html)
+
+右方網址為尋找Lua鍵盤設定碼時找到的網址。
+[keyboard code of Unicode web](http://www.runoob.com/try/try.php?filename=tryjsref_event_key_keycode)
+
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/2019-04-07_22-37-07.gif"  height="250" width="500"&gt;</t>
+<t tx="leo.20190414200641.12">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190414200641.13">### 圖形導入
+
+最後導入畫完的手足球場地後的樣子 , 在模擬時由於尚未簡化 , 會死機...太過於龐大的圖形處理電腦跑不動...
+
+[詳細介紹於此網站中](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Final-handball.html)
+
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/handball_lag_by_going.png"  height="250" width="500"&gt;</t>
+<t tx="leo.20190414200641.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190414200641.3">### 簡單介紹Task-2
+
+* BubbleRob 整理
+
+* 方向鍵嵌入Vrep
+
+* Onshape
+
+* 模擬手足球人形的運動
+
+* 圖形導入
+
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/handball_final.png"  height="250" width="500"&gt;</t>
+<t tx="leo.20190414200641.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190414200641.5">### BubbleRob 整理
+
+在等待組員畫完手足球場地及人員的同時 , 先做了一次教學PDF的內容。
+
+[詳細內容](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Vrep.html) 整理大部分是組員做的。
+
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/Test.gif"  height="250" width="500"&gt;
+
+</t>
+<t tx="leo.20190414200641.6">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190414200641.7">### 方向鍵嵌入Vrep
+
+利用Lua設置軸的代號並附上方向鍵的程式庫寫入加速度或減速度 , 圖中加入一個如龐克造型的camera。
+
+[網站](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Vrep-2.html)
+
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/2019-04-01_11-18-51.gif"  height="250" width="500"&gt;
+</t>
+<t tx="leo.20190414200641.8">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190414200641.9">### Onshape
+
+大部分是組員分工畫的 , 部分構造則由我建議更改設計 , 如:回球、場地四個角落、場中五個凸點。
+
+[手足球場地設計](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Onshape.html)
+
+[回球軌道](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Extra-add.html)
+
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/road_of_handball_go_back.png"  height="250" width="500"&gt;</t>
+<t tx="leo.20190414233558.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190414233558.2">### 每周心得
+
+內容大致上都有儲存於個人網頁中,就不詳細說明了
+
+[w1](https://mdecadp2018.github.io/site-40623130/content/Week-one.html)、[w2](https://mdecadp2018.github.io/site-40623130/content/Week-two.html)、[w3](https://mdecadp2018.github.io/site-40623130/content/Week-three.html)、[w4](https://mdecadp2018.github.io/site-40623130/content/Week-four.html)、[w5](https://mdecadp2018.github.io/site-40623130/content/Week-five.html)、[w6](https://mdecadp2018.github.io/site-40623130/content/Week-six.html)、[w7](https://mdecadp2018.github.io/site-40623130/content/Week-seven.html)、[w8](https://mdecadp2018.github.io/site-40623130/content/Week-eight.html)</t>
+<t tx="leo.20190414233932.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190414233932.3">### 取分項目(1.5)-隨機分組介面
+
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/team-divider-finil-finish.png"&gt;</t>
 </tnodes>
 </leo_file>
