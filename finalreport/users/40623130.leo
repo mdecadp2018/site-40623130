@@ -488,7 +488,7 @@ Table: 價目表 {#tbl:價目表}
 
 ![reference_to_XYZ](./images/3.png "reference_to_XYZ")
 
-選取剛剛拆解的全部物件，點選左上的Edit→Reorient bounding box→with reference of world這樣物件們就會全部對齊了。
+選取剛剛拆解的全部物件，點選左上的Edit→Reorient bounding box→with reference of world這樣物件們就會全部對齊了。!!!
 
 </t>
 <t tx="leo.20190101193621.1">外觀設定
