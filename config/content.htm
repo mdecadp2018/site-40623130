@@ -605,7 +605,11 @@ function C_K_B_X4() --C_fourth_kick--
     sim.setJointTargetVelocity(LR4,5)
     end
 end</pre>
-<p></p><h1>Task1-1</h1>
+<h2>Week-sixteen</h2>
+<p>這周特別累...需要做的有很多同時問題也很多...</p>
+<p>完成了手足球啦!!!!!!!!!!!!!!!最後就剩報告&amp;pdf&amp;影片了</p>
+<p>原本想打個抱怨，但想到這學期也要到尾聲了就覺得無所謂了</p>
+<p>這周預計進度:手足球allversion &amp; 投影片&amp; 期末影片 &amp; PDF </p><h1>Task1-1</h1>
 <p>分組後我選擇<a href="http://mde.tw/cd2019/content/w1%E5%8F%96%E5%88%86%E9%A0%85%E7%9B%AE.html">Task1-1</a></p>
 <p>本學期針對各實習任務, 加入取分項目, 各組可以將此項目分配給組員, 完成後可以在自評或互評中做為取分任務.</p>
 <p>W1 任務一項目一: 在利用亂數分組, 能否根據已經完成的主程式, 編寫一個網際程式或單機 PyQt5 程式, 讀進相關資料檔案後, 在瀏覽器或 PYQt5 程式中顯示出結果.</p>
@@ -801,4 +805,627 @@ end
 <p><a href="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/downloads/tfootball.7z">ttt檔</a></p>
 <p>原本要編寫切換鍵但於vrep中用io.clock等時間等待輸入雙命令時會出現運算值過大導致停止問題 , 所以先寫電腦打擊與跟蹤球<br/><br/></p>
 <p>原python code出處(by 40623128):<a href="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E6%89%8B%E8%B6%B3%E7%90%83%E6%89%8B%E6%8E%A7%E8%88%87%E9%9B%BB%E8%85%A6%E5%B0%8D%E6%89%93.html">https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g3_1/content/%E6%89%8B%E8%B6%B3%E7%90%83%E6%89%8B%E6%8E%A7%E8%88%87%E9%9B%BB%E8%85%A6%E5%B0%8D%E6%89%93.html</a></p>
-<p></p>
+<h1>Vrep手足球-All_Version</h1>
+<p>這頁會完整呈現全部手足球的版本，<strong>若要參考請標示來原出處</strong>，由於版本過多可能已經搞混，目前將還記得的推上共15種。<a href="/downloads/FTB_allversion.7z">Download_all</a><sub> (解壓密碼是俺學號da)</sub></p>
+<p>Read_me:</p>
+<p>包含中後期版本<br/>圖檔更新頻繁所以沒有打入版本也沒加入壓縮中<br/>V-rep中操作手足球與電腦對打<br/>建議調慢一格速度</p>
+<p>若要操作最終版本<br/>操作說明:方向鍵的左右下按鍵 + zxcv 分別按照順序從 z 的守門員到 v 的最前排 + R 鍵用來讓球回位到中間(怕卡bug)</p>
+<p><strong>FTB_Version(1)</strong>:算是最初的版本，不包含code，場地設計最初版本，人員有20人，全部碰裝關係都沒設定好，一碰就倒的且只有上下左右的版本。</p>
+<p><img alt="" height="520" src="/images/FTB(1).gif" width="1000"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    Slide_rail= sim.getObjectHandle('R1')
+    Roller= sim.getObjectHandle('RR1')
+    Slide_rail_v=0
+    Roller_v=0
+    dVel=0.5
+end
+
+function sysCall_actuation()
+    message,auxiliaryData=sim.getSimulatorMessage()
+    while message~=-1 do
+        if (message==sim.message_keypress) then            
+            if (auxiliaryData[1]==32) then
+               Roller_v = Roller_v - dVel*20
+               if (Roller_v &gt; 0) then
+                  Roller_v = 0
+               end
+            end
+            if (auxiliaryData[1]==2008) then
+                Roller_v = Roller_v + dVel*20
+               if (Roller_v &lt; 0) then
+                  Roller_v = 0
+               end
+            end
+            if (auxiliaryData[1]==2009) then
+               Slide_rail_v = Slide_rail_v + dVel/15
+               if (Slide_rail_v &lt; 0) then
+                  Slide_rail_v = 0
+               end
+            end
+            if (auxiliaryData[1]==2010) then
+                Slide_rail_v = Slide_rail_v - dVel/15
+                if (Slide_rail_v &gt; 0) then
+                  Slide_rail_v = 0
+                end
+            end
+        end
+        message,auxiliaryData=sim.getSimulatorMessage()
+    end
+    sim.setJointTargetVelocity(Slide_rail,Slide_rail_v)
+    sim.setJointTargetVelocity(Roller,Roller_v)
+end</pre>
+<p><strong>FTB_Version(2)</strong>:設定好大部分桿件的作動關係，方向鍵及踢球完成，設定好四根同動，與上個版本相差最多的版本...</p>
+<p><img alt="" height="520" src="/images/FTB(2).gif" width="1000"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    Slide_rail= sim.getObjectHandle('R1')
+    Roller= sim.getObjectHandle('RR1')
+    Slide_rail2= sim.getObjectHandle('R2')
+    Roller2= sim.getObjectHandle('RR2')
+    Slide_rail3= sim.getObjectHandle('R3')
+    Roller3= sim.getObjectHandle('RR3')
+    Slide_rail4= sim.getObjectHandle('R4')
+    Roller4= sim.getObjectHandle('RR4')
+    Slide_rail_v=0
+    Roller_v=0
+    Roller_v2=0
+    Roller_v3=0
+    Roller_v4=0
+    dVel=0.5
+end
+
+function sysCall_actuation()
+    message,auxiliaryData=sim.getSimulatorMessage()
+    while message~=-1 do
+        if (message==sim.message_keypress) then            
+            if (auxiliaryData[1]==122) then
+               Roller_v = Roller_v - dVel*20
+               if (Roller_v &gt; 0) then
+                  Roller_v = 0
+               end
+            end
+            if (auxiliaryData[1]==120) then
+               Roller_v2 = Roller_v2 - dVel*20
+               if (Roller_v2 &gt; 0) then
+                  Roller_v2 = 0
+               end
+            end
+            if (auxiliaryData[1]==99) then
+               Roller_v3 = Roller_v3 - dVel*20
+               if (Roller_v3 &gt; 0) then
+                  Roller_v3 = 0
+               end
+            end
+            if (auxiliaryData[1]==118) then
+               Roller_v4 = Roller_v4 - dVel*20
+               if (Roller_v4 &gt; 0) then
+                  Roller_v4 = 0
+               end
+            end
+            if (auxiliaryData[1]==2008) then
+                Roller_v = Roller_v + dVel*20
+               if (Roller_v &lt; 0) then
+                  Roller_v = 0
+               end
+            end
+            if (auxiliaryData[1]==2008) then
+                Roller_v2 = Roller_v2 + dVel*20
+               if (Roller_v2 &lt; 0) then
+                  Roller_v2 = 0
+               end
+            end
+            if (auxiliaryData[1]==2008) then
+                Roller_v3 = Roller_v3 + dVel*20
+               if (Roller_v3 &lt; 0) then
+                  Roller_v3 = 0
+               end
+            end
+            if (auxiliaryData[1]==2008) then
+                Roller_v4 = Roller_v4 + dVel*20
+               if (Roller_v4 &lt; 0) then
+                  Roller_v4 = 0
+               end
+            end
+            if (auxiliaryData[1]==2009) then
+               Slide_rail_v = Slide_rail_v + dVel/15
+               if (Slide_rail_v &lt; 0) then
+                  Slide_rail_v = 0
+               end
+            end
+            if (auxiliaryData[1]==2010) then
+                Slide_rail_v = Slide_rail_v - dVel/15
+                if (Slide_rail_v &gt; 0) then
+                  Slide_rail_v = 0
+                end
+            end
+        end
+        message,auxiliaryData=sim.getSimulatorMessage()
+    end
+    Slide_rail_v2 = Slide_rail_v/1.1
+    Slide_rail_v3 = Slide_rail_v/1.2
+    Slide_rail_v4 = Slide_rail_v/1.3
+    sim.setJointTargetVelocity(Slide_rail,Slide_rail_v)
+    sim.setJointTargetVelocity(Roller,Roller_v)
+    sim.setJointTargetVelocity(Slide_rail2,Slide_rail_v2)
+    sim.setJointTargetVelocity(Roller2,Roller_v2)
+    sim.setJointTargetVelocity(Slide_rail3,Slide_rail_v3)
+    sim.setJointTargetVelocity(Roller3,Roller_v4)
+    sim.setJointTargetVelocity(Slide_rail4,Slide_rail_v4)
+    sim.setJointTargetVelocity(Roller4,Roller_v3)
+end</pre>
+<p><strong>FTB_Version(3):</strong>新增玩家的人形回位code、染色、反向操作 (Hard version)</p>
+<p><img alt="" height="520" src="/images/FTB(3).gif" width="1000"/></p>
+<p>以下程式加到function sysCall_actuation()中</p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">    A= sim.getObjectHandle('RS1_PO1')
+    PA= sim.getObjectPosition(A,-1)
+    if PA[1] &gt;= -0.712 then
+        Roller_v = Roller_v + dVel*3
+    end
+    B= sim.getObjectHandle('RS2_PO1')
+    PB= sim.getObjectPosition(B,-1)
+    if PB[1] &gt;= -0.531 then
+        Roller_v2 = Roller_v2 + dVel*3
+    end
+    C= sim.getObjectHandle('RS4_PO2')
+    PC= sim.getObjectPosition(C,-1)
+    if PC[1] &gt;= -0.197 then
+        Roller_v3=Roller_v3 + dVel*5
+    end
+    D= sim.getObjectHandle('RS3_PO1')
+    PD= sim.getObjectPosition(D,-1)
+    if PD[1] &gt;= 0.137 then
+        Roller_v4=Roller_v4 + dVel*5
+    end</pre>
+<p><strong>FTB_Version(4):</strong>注意!code中第28行擷取的物件名稱為('LL3')而非壓縮檔中的('LR3')、加入電腦回擊code{守門員}及第二桿件追蹤半設定、改變玩家桿件旋轉的踢球速度</p>
+<p><img alt="" height="520" src="/images/FTB(4).gif" width="1000"/></p>
+<p>以下程式為新增的code</p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+ --computer--
+    KBV = 10
+    F = (math.pi/180)*KBV
+    G = -(math.pi/180)*KBV
+    Ball=sim.getObjectHandle('ball')
+
+    Body=sim.getObjectHandle('LSO1')
+    Body2=sim.getObjectHandle('LSO2')
+  --  test=sim.getObjectHandle('LS2_P2')
+    LR1=sim.getObjectHandle('LR1')  
+    LR2=sim.getObjectHandle('LR2')
+    LR3=sim.getObjectHandle('LL3')
+    LR4=sim.getObjectHandle('LR4')
+    L1=sim.getObjectHandle('L1')
+    L2=sim.getObjectHandle('L2')
+    L3=sim.getObjectHandle('L3')
+    L4=sim.getObjectHandle('L4')
+end
+function sysCall_actuation()
+--computer--
+    Body_s = sim.getObjectPosition(Body,-1)
+    Ball_s = sim.getObjectPosition(Ball,-1)
+    X = Body_s[1] - Ball_s[1]
+    Y = Body_s[2] - Ball_s[2]
+    if 1 then
+        if X &lt;= 0.02 and Y &lt;= 0 then
+            sim.setJointTargetVelocity(LR1,G)
+            sim.setJointTargetVelocity(LR1,-5)
+        elseif X &gt; 0.02 and Y &lt;= 0 then
+            sim.setJointTargetVelocity(LR1,G)
+            sim.setJointTargetVelocity(LR1,2)
+        elseif X &lt;= 0.02 and Y &gt; 0 then            
+            sim.setJointTargetVelocity(LR1,F)
+            sim.setJointTargetVelocity(LR1,-5)        
+        elseif X &gt; 0.02 and Y &gt; 0 then            
+            sim.setJointTargetVelocity(LR1,F)    
+            sim.setJointTargetVelocity(LR1,2)
+        end
+        YYYYY = Y*7
+        sim.setJointTargetVelocity(L1,YYYYY)
+    end
+    --test--
+    Body_s2 = sim.getObjectPosition(Body2,-1)
+   -- test_s = sim.getObjectPosition(test,-1)
+    X2_1 = Body_s2[1] - Ball_s[1]
+    Y2_1 = Body_s2[2] - Ball_s[2] -0.15
+    Y2_2 = Body_s2[2] - Ball_s[2] +0.15
+    --M =  test_s[2]- Ball_s[2]
+    print(X2_1)
+    if X2_1 &gt; 0.02 then
+    Y2_1 = Y2_1*5
+    sim.setJointTargetVelocity(L2,Y2_1)
+    Y2_2 = Y2_2*5
+    sim.setJointTargetVelocity(L2,Y2_2)
+    end
+end
+</pre>
+<p><strong>FTB_Version(5):</strong>將反向操作改回同向操作，新增電腦二、三桿件回擊與位置判斷，此版本存在些許BUG測試請注意、稍縮短電腦擊球判斷式</p>
+<p><img alt="" height="520" src="/images/FTB(5).gif" width="1000"/></p>
+<p>以下程式為新增的code</p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    --computer--
+    KBV = 10
+    F = (math.pi/180)*KBV
+    G = -(math.pi/180)*KBV
+    Ball=sim.getObjectHandle('ball')
+    Body=sim.getObjectHandle('LSO1')
+    Body2=sim.getObjectHandle('LSO2')
+    Body3=sim.getObjectHandle('LSO3')
+    Body4=sim.getObjectHandle('LSO4')
+  --  test=sim.getObjectHandle('LS2_P2')
+    LR1=sim.getObjectHandle('LR1')  
+    LR2=sim.getObjectHandle('LR2')
+    LR3=sim.getObjectHandle('LL3')
+    LR4=sim.getObjectHandle('LR4')
+    L1=sim.getObjectHandle('L1')
+    L2=sim.getObjectHandle('L2')
+    L3=sim.getObjectHandle('L3')
+    L4=sim.getObjectHandle('L4')
+end
+
+function sysCall_actuation()
+    --computer--
+    Body_s = sim.getObjectPosition(Body,-1)
+    Ball_s = sim.getObjectPosition(Ball,-1)
+    X = Body_s[1] - Ball_s[1]
+    Y = Body_s[2] - Ball_s[2]
+    if 1 then
+        if X &lt;= 0.02 and Y &lt;= 0 then
+            sim.setJointTargetVelocity(LR1,-5)
+        elseif X &gt; 0.02 and Y &lt;= 0 then
+            sim.setJointTargetVelocity(LR1,2)
+        elseif X &lt;= 0.02 and Y &gt; 0 then            
+            sim.setJointTargetVelocity(LR1,-5)        
+        elseif X &gt; 0.02 and Y &gt; 0 then                
+            sim.setJointTargetVelocity(LR1,2)
+        end
+        YYYYY = Y*7
+        sim.setJointTargetVelocity(L1,YYYYY)
+    end
+    --test--
+    Body_s2 = sim.getObjectPosition(Body2,-1)
+    --test_s = sim.getObjectPosition(test,-1)
+    X2_1 = Body_s2[1] - Ball_s[1]
+    Y2_1 = Body_s2[2] - Ball_s[2] - 0.15
+    Y2_2 = Body_s2[2] - Ball_s[2] + 0.15
+    --M =  test_s[2]- Ball_s[2]
+    --print(X2_1)
+    if X2_1 &gt;= 0.02 then
+        if Ball_s[2] &lt;= -0.133 then
+            if X2_1 &lt; 0.03 then
+            sim.setJointTargetVelocity(LR2,-5)
+            elseif X2_1 &gt; 0.03 then
+            sim.setJointTargetVelocity(LR2,5)
+            end
+        Y2_1 = Y2_1*5
+        sim.setJointTargetVelocity(L2,Y2_1)
+        elseif Ball_s[2] &gt; -0.133 then
+            if X2_1 &lt; 0.03 then
+            sim.setJointTargetVelocity(LR2,-5)
+            elseif X2_1 &gt; 0.03 then
+            sim.setJointTargetVelocity(LR2,5)
+            end
+        Y2_2 = Y2_2*5
+        sim.setJointTargetVelocity(L2,Y2_2)
+        end
+    end
+    Body_s4 = sim.getObjectPosition(Body4,-1)
+    X4_1 = Body_s4[1] - Ball_s[1]
+    Y4_1 = Body_s4[2] - Ball_s[2] - 0.15
+    Y4_2 = Body_s4[2] - Ball_s[2] + 0.15
+    if X4_1 &gt;= 0.02 then
+        if Ball_s[2] &lt;= -0.133 then
+            if X4_1 &lt; 0.03 then
+            sim.setJointTargetVelocity(LR4,-5)
+            elseif X4_1 &gt; 0.03 then
+            sim.setJointTargetVelocity(LR4,5)
+            end
+        Y4_1 = Y4_1*3
+        sim.setJointTargetVelocity(L4,Y4_1)
+        elseif Ball_s[2] &gt; -0.133 then
+            if X4_1 &lt; 0.03 then
+            sim.setJointTargetVelocity(LR4,-5)
+            elseif X4_1 &gt; 0.03 then
+            sim.setJointTargetVelocity(LR4,5)
+            end
+        Y4_2 = Y4_2*3
+        sim.setJointTargetVelocity(L4,Y4_2)
+        end
+    end
+end</pre>
+<p><strong>FTB_Version(6):</strong>開始意識到最近版本中已加入球的彈性係數(對平面顯示較明顯)、電腦回擊系統'最初'完整版定型、縮短code及判斷式、將電腦回擊函式外移、加入上視圖攝影視角</p>
+<p><img alt="" height="520" src="/images/FTB(6).gif" width="1000"/></p>
+<p>以下都更改於function sysCall_actuation()中</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">-------------------------------------
+               if (auxiliaryData[1]==2008) then
+                Roller_v = Roller_v + dVel*20
+                Roller_v2 = Roller_v2 + dVel*20
+                Roller_v3 = Roller_v3 + dVel*20
+                Roller_v4 = Roller_v4 + dVel*20
+               if (Roller_v &lt; 0) then
+                  Roller_v = 0
+               end
+               if (Roller_v2 &lt; 0) then
+                  Roller_v2 = 0
+               end
+               if (Roller_v3 &lt; 0) then
+                  Roller_v3 = 0
+               end
+               if (Roller_v4 &lt; 0) then
+                  Roller_v4 = 0
+               end
+            end
+-----------------------------------------------
+    --computer--
+    Body_s = sim.getObjectPosition(Body,-1)
+    Ball_s = sim.getObjectPosition(Ball,-1)
+    X = Body_s[1] - Ball_s[1]
+    Y = Body_s[2] - Ball_s[2]
+    if 1 then
+        if X &lt;= 0.02 and Y &lt;= 0 then
+            sim.setJointTargetVelocity(LR1,-5)
+        elseif X &gt; 0.02 and Y &lt;= 0 then
+            sim.setJointTargetVelocity(LR1,2)
+        elseif X &lt;= 0.02 and Y &gt; 0 then            
+            sim.setJointTargetVelocity(LR1,-5)        
+        elseif X &gt; 0.02 and Y &gt; 0 then                
+            sim.setJointTargetVelocity(LR1,2)
+        end
+        YYYYY = Y*7
+        sim.setJointTargetVelocity(L1,YYYYY)
+    end
+
+    Body_s2 = sim.getObjectPosition(Body2,-1)
+    X2_1 = Body_s2[1] - Ball_s[1]
+    Y2_1 = Body_s2[2] - Ball_s[2] - 0.15
+    Y2_2 = Body_s2[2] - Ball_s[2] + 0.15
+    if X2_1 &gt;= 0.02 then
+        if Ball_s[2] &lt;= -0.133 then
+            C_K_B_X2()
+        Y2_1 = Y2_1*5
+        sim.setJointTargetVelocity(L2,Y2_1)
+        elseif Ball_s[2] &gt; -0.133 then
+            C_K_B_X2()
+        Y2_2 = Y2_2*5
+        sim.setJointTargetVelocity(L2,Y2_2)
+        end
+    end
+
+    Body_s4 = sim.getObjectPosition(Body4,-1)
+    X4_1 = Body_s4[1] - Ball_s[1]
+    Y4_1 = Body_s4[2] - Ball_s[2] - 0.15
+    Y4_2 = Body_s4[2] - Ball_s[2] + 0.15
+    if X4_1 &gt;= 0.02 then
+        if Ball_s[2] &lt;= -0.133 then
+            C_K_B_X4()
+        Y4_1 = Y4_1*3
+        sim.setJointTargetVelocity(L4,Y4_1)
+        elseif Ball_s[2] &gt; -0.133 then
+            C_K_B_X4()
+        Y4_2 = Y4_2*3
+        sim.setJointTargetVelocity(L4,Y4_2)
+        end
+    end
+--[[
+    test_s = sim.getObjectPosition(test,-1)
+    M =  test_s[2]- Ball_s[2]
+    print(M)
+--]]
+    Body_s3 = sim.getObjectPosition(Body3,-1)
+    X3_1 = Body_s3[1] - Ball_s[1]
+    Y3_1 = Body_s3[2] - Ball_s[2]
+    Y3_2 = Body_s3[2] - Ball_s[2] +0.2487
+    Y3_3 = Body_s3[2] - Ball_s[2] -0.2487
+    if X3_1 &gt;= 0.02 then
+        if Ball_s[2] &lt; -0.0028 and Ball_s[2] &gt;= -0.2487 then
+            C_K_B_X3()
+        Y3_1 = Y3_1*1.5
+        sim.setJointTargetVelocity(L3,Y3_1)
+        elseif Ball_s[2] &gt;= -0.0028 then
+            C_K_B_X3()
+        Y3_2 = Y3_2*1.5
+        sim.setJointTargetVelocity(L3,Y3_2)
+        elseif Ball_s[2] &lt; -0.2487 then
+            C_K_B_X3()
+        Y3_3 = Y3_3*1.5
+        sim.setJointTargetVelocity(L3,Y3_3)
+        end
+    end
+end
+function C_K_B_X2()
+    if X2_1 &lt; 0.03 then
+    sim.setJointTargetVelocity(LR2,-5)
+    elseif X2_1 &gt; 0.03 then
+    sim.setJointTargetVelocity(LR2,5)
+    end
+end
+function C_K_B_X3()
+    if X3_1 &lt; 0.03 then
+    sim.setJointTargetVelocity(LR3,-5)
+    elseif X3_1 &gt; 0.03 then
+    sim.setJointTargetVelocity(LR3,5)
+    end
+end
+function C_K_B_X4()
+    if X4_1 &lt; 0.03 then
+    sim.setJointTargetVelocity(LR4,-5)
+    elseif X4_1 &gt; 0.03 then
+    sim.setJointTargetVelocity(LR4,5)
+    end
+end
+</pre>
+<p><strong>FTB_Version(7):</strong>於code加入部分註解、縮短電腦擊球判斷式、加入回球判斷式</p>
+<p><img alt="" height="520" src="/images/FTB(7).gif" width="1000"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">       if 1 then  --C_goalkeeper
+            if X &lt;= 0.02 then
+                sim.setJointTargetVelocity(LR1,-5)
+            elseif X &gt; 0.02 then
+                sim.setJointTargetVelocity(LR1,5)
+            end
+       end
+----------------
+       if Ball_s[1] &lt; -0.85 or Ball_s[1] &gt;= 0.61 then
+            sim.setObjectPosition(Ball,-1,{-0.1429, -0.1334, 0.5})
+       end</pre>
+<p><strong>FTB_Version(8):</strong>加入計分判斷式、更改回球判斷式</p>
+<p><img alt="" height="550" src="/images/FTB(8).gif" width="1000"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">--reborn_ball &amp; count goal--
+    if Ball_s[1] &lt; -0.85 then
+        Player_G = Player_G + 1
+    end    
+    if Ball_s[1] &gt;= 0.61 then
+        Computer_G = Computer_G+1
+    end
+    if Ball_s[1] &lt; -0.85 or Ball_s[1] &gt;= 0.61 then
+        sim.setObjectPosition(Ball,-1,{-0.1429, -0.1334, 0.5})
+        print[[Player:Computer]]
+        print('      '..Computer_G..'     '..Player_G)
+    end
+end</pre>
+<p><strong>FTB_Version(9):</strong>小改輸入參數及刪除多餘code</p>
+<p><strong>FTB_Version(10):暫時</strong>更改場地設計、小改輸入參數</p>
+<p><img alt="" height="520" src="/images/FTB(10).gif" width="1000"/></p>
+<p><strong>FTB_Version(11):</strong>小改輸入參數、更改編寫方法</p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false"> --reborn_ball &amp; count goal--
+    if Ball_s[1] &lt; -0.85 then
+        Player_G = Player_G + 1
+        sim.setObjectPosition(Ball,-1,{-0.13, -0.1334, 0.5})
+    end    
+    if Ball_s[1] &gt;= 0.61 then
+        Computer_G = Computer_G + 1
+        sim.setObjectPosition(Ball,-1,{-0.15, -0.1334, 0.5})
+    end
+    if Ball_s[1] &lt; -0.85 or Ball_s[1] &gt;= 0.61 then
+        print[[Player : Computer]]
+        print('      '..Computer_G..'     '..Player_G)
+    end
+end
+function C_K_B_X2() --C_second_kick--
+    if X2_1 &lt; 0.06 then
+    sim.setJointTargetVelocity(LR2,-5)
+    elseif X2_1 &gt; 0.03 then
+    sim.setJointTargetVelocity(LR2,5)
+    end
+end
+function C_K_B_X3() --C_third_kcik--
+    if X3_1 &lt; 0.06 then
+    sim.setJointTargetVelocity(LR3,-5)
+    elseif X3_1 &gt; 0.03 then
+    sim.setJointTargetVelocity(LR3,5)
+    end
+end
+function C_K_B_X4() --C_fourth_kick--
+    if X4_1 &lt; 0.06 then
+    sim.setJointTargetVelocity(LR4,-5)
+    elseif X4_1 &gt; 0.03 then
+    sim.setJointTargetVelocity(LR4,5)
+    end
+end</pre>
+<p><strong>FTB_Version(12):</strong>更改桿件作動關係與桿件外觀、更改回位按鍵{R鍵}、參數修正</p>
+<p><strong>FTB_Version(13):</strong>加入導球機構以及他的作動code(測試中)</p>
+<p><img alt="" height="520" src="/images/FTB(13).gif" width="1000"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function reborn_ball_count_goal()
+    if Ball_s[1] &lt; -0.85 and Ball_s[3] &gt; 0.12507 then
+        Player_G = Player_G + 1
+--        sim.setObjectPosition(Ball,-1,{-0.13, -0.1334, 0.5})
+    end    
+    if Ball_s[1] &gt;= 0.61 and Ball_s[3] &gt; 0.1251 then
+        Computer_G = Computer_G + 1
+--        sim.setObjectPosition(Ball,-1,{-0.15, -0.1334, 0.5})
+    end
+    if Ball_s[3] &gt; 0.1251 then
+        if Ball_s[1] &lt; -0.85 or Ball_s[1] &gt;= 0.61 then
+            print[[Player : Computer]]
+            print('      '..Computer_G..'     '..Player_G)
+        end
+    end
+    print(Ball_s)
+    if Ball_s[1] &gt; 0.905 and Ball_s[2] &lt; -0.069 and Ball_s[3] &lt; 0.036 then
+        sim.setJointTargetVelocity(Push_1,1)
+    end
+    if Ball_s[1] &lt; -1.15 and Ball_s[2] &lt; -0.123 and Ball_s[3] &lt; 0.036 then
+        sim.setJointTargetVelocity(Push_2,-1)
+    end
+    if Ball_s[3] &gt; 0.036 then
+        sim.setJointTargetVelocity(Push_1,-1)
+        sim.setJointTargetVelocity(Push_2,1)
+    end</pre>
+<p><strong>FTB_Version(14):</strong>更改導球機構code、加入'類'回球code、更改場地顏色、小改參數、設定桿件與球與軌道的關係設定!!、導球機構新增上蓋、計分參數bug...</p>
+<p><img alt="" height="520" src="/images/FTB(14).gif" width="1000"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function reborn_ball_count_goal()
+    if Ball_s[1] &lt; -0.85 and Ball_s[3] &gt; 0.12507 then
+        Player_G = Player_G + 1
+--        sim.setObjectPosition(Ball,-1,{-0.13, -0.1334, 0.5})
+    end    
+    if Ball_s[1] &gt;= 0.61 and Ball_s[3] &gt; 0.1251 then
+        Computer_G = Computer_G + 1
+--        sim.setObjectPosition(Ball,-1,{-0.15, -0.1334, 0.5})
+    end
+    if Ball_s[3] &gt; 0.1251 then
+        if Ball_s[1] &lt; -0.85 or Ball_s[1] &gt;= 0.61 then
+            print[[Player : Computer]]
+            print('      '..Computer_G..'     '..Player_G)
+        end
+    end
+    if Ball_s[1] &gt; 0.905 and Ball_s[2] &lt; -0.069 and Ball_s[3] &lt; 0.036 then
+        sim.setJointTargetVelocity(Push_1,1)
+    end
+    if Ball_s[1] &lt; -1.15 and Ball_s[2] &lt; -0.123 and Ball_s[3] &lt; 0.036 then
+        sim.setJointTargetVelocity(Push_2,-1)
+    end
+    if Ball_s[3] &gt; 0.036 then
+        sim.setJointTargetVelocity(Push_1,-1)
+        sim.setJointTargetVelocity(Push_2,1)
+    end
+    if Ball_s[1] &lt; -1.156 and Ball_s[2] &gt; 0.163 and Ball_s[3] &gt; 0.058 then
+    sim.setObjectPosition(Ball,-1,{-0.20361, 0.2739, 0.15735})
+    end
+    if Ball_s[1] &lt; -0.20361 and Ball_s[2] &gt; 0.2740 and Ball_s[3] &gt; 0.15735 then
+    sim.setObjectPosition(Ball,-1,{-0.2049, 0.23, 0.1482})
+    end
+    if Ball_s[1] &gt; 0.9056 and Ball_s[2] &lt;  -0.4247 and Ball_s[3] &gt; 0.0592 then
+    sim.setObjectPosition(Ball,-1,{-0.043425,  -0.60401, 0.15735})
+    end
+    if Ball_s[1] &gt; -0.04753 and Ball_s[2] &lt;  -0.5240 and Ball_s[3] &gt; 0.15735 then
+    sim.setObjectPosition(Ball,-1,{-0.03667,  -0.48443, 0.1482})
+    end</pre>
+<p><strong>FTB_Version_Final:</strong>修改計分code、刪除大多的測試code、</p>
+<p><img alt="" height="565" src="/images/FTB(final).gif" width="1000"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function reborn_ball_count_goal()
+    if Ball_s[1] &lt; -0.85 and Ball_s[1] &gt; -0.87 then
+        Player_G = Player_G + 1
+    end    
+    if Ball_s[1] &gt; 0.61 and Ball_s[1] &lt; 0.62 then
+        Computer_G = Computer_G + 1
+    end
+    if Ball_s[1] &lt; -0.85 or Ball_s[1] &gt; 0.61 then
+        print[[Player : Computer]]
+        print('      '..Computer_G..'     '..Player_G)
+    end</pre>
+<p><strong>影片皆屬於後面幾個版本的，其餘影片於15周心得中</strong></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="//www.youtube.com/embed/AlJDwybClS8" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="//www.youtube.com/embed/HpKoChBwPaw" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="//www.youtube.com/embed/v7auUIJMlGg" width="560"></iframe></p>
+<p><strong>結論</strong>:很累...</p>
+<p>會決定用Vrep內設的Lua編寫是因為他的運行速度較快以及編譯叫好懂，雖然有運算的上限。最一開始是從玩家的上下左右開始編寫，之後參考28號同學的電腦回擊寫法後也寫了一個類似的Lua版本但之後發現還可以再修短，之後慢慢地就把全部的code都寫好了，即使到現在計分的判斷還是會有bug原本是用範圍判定之後改成小範圍判定這樣就精準但還是會有多算的時候。</p>
+<p>之後是最重要且最需要解釋的:我們的回球機構一開始就有問題所以才會寫一個過球門救回R點的code版本後來加入機構後嘗試寫個正常的版本，但距離太遠+斜度太過+球含有很0.75的彈性係數，這導致球根本上不去或是飛出軌道...我想到的解決方法是加上蓋子以及在球於軌道中時寫個判斷式讓球傳送到離洞口較近的下坡，想不到球一開始就過不了洞，之後又寫了個讓球能滾出去的code，這是偷吃步的方法也是利用程式輔助機構的方法，雖然很濺但確實可行。</p>
+<h1>Vrep手足球-注意事項</h1>
+<p>1.彈性系數於球的材質中調整，而材質的調整在關係設定的下方</p>
+<p><img alt="" height="179" src="/images/FTB_attention (1).png" width="700"/></p>
+<p>2.反作用設定:包含場地、球、桿件、人形 ((解釋起來很麻煩但大概是這樣</p>
+<p>第一個為場地 : 第一行設定讓除了球、人形的桿件能反應但設定第八行讓球、人形可反應但桿件無法，其餘不勾選</p>
+<p><img alt="" src="/images/FTB_attention (5).png" width="600"/></p>
+<p>第二個為球 : 第一行不勾選讓桿件與人行無法反應，但勾選其他行(第八)讓人形能反應</p>
+<p><img alt="" height="160" src="/images/FTB_attention (6).png" width="600"/></p>
+<p>第三個為桿件 : 只與場地反應((這裡注意，桿件本身與人型成父子屬性</p>
+<p><img alt="" height="264" src="/images/FTB_attention (7).png" width="600"/></p>
+<p>最後是人形 : 勾選第八行讓球反應可踢球且因與場地反應所以不出場地</p>
+<p><img alt="" src="/images/FTB_attention (8).png" width="600"/></p>
+<p>理解這個需要一點邏輯...如果不懂就照勾選吧...</p>
+<p>若不設定這樣有些重疊處會衝突如下:</p>
+<p><img alt="" height="328" src="/images/FTB_attention (2).png" width="350"/></p>
+<p>3.運行時建議 先點一下烏龜 太快會增加電腦能力也有機率bug</p>
+<p><img alt="" height="107" src="/images/FTB_attention (13).png" width="200"/></p>
+<p>4.此圖看不見球的機溝回送球體因為有上蓋，功能 : 防球飛出去也防視野</p>
+<p><img alt="" height="625" src="/images/FTB_attention (9).png" width="665"/></p>
+<p>5.上圖的父子設定很簡單如下</p>
+<p><img alt="" height="152" src="/images/FTB_attention (11).png" width="250"/></p>
+<p>最後Show一下最終版本</p>
+<p><img alt="" height="946" src="/images/FTB_attention (10).png" width="1500"/></p>
