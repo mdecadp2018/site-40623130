@@ -21,6 +21,26 @@
 <v t="leo.20180827201621.9"><vh>封面投影片</vh>
 <v t="leo.20180827201621.10"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20190609202217.1"><vh>Task-3</vh>
+<v t="leo.20190609202217.2"><vh>LIST-LIST</vh>
+<v t="leo.20190609202217.3"><vh>List-t1</vh></v>
+</v>
+<v t="leo.20190609202217.4"><vh>FTB-LIST</vh>
+<v t="leo.20190609202217.5"><vh>FTB</vh></v>
+</v>
+<v t="leo.20190609202217.8"><vh>Draw-list</vh>
+<v t="leo.20190609202217.9"><vh>Draw</vh></v>
+</v>
+<v t="leo.20190609202217.10"><vh>Github_list</vh>
+<v t="leo.20190609202217.11"><vh>Github</vh></v>
+</v>
+<v t="leo.20190609202217.12"><vh>contribution_list</vh>
+<v t="leo.20190609202217.13"><vh>contribution</vh></v>
+</v>
+<v t="leo.20190609202217.14"><vh>Goal-list</vh>
+<v t="leo.20190609202217.15"><vh>Goal</vh></v>
+</v>
+</v>
 <v t="leo.20181029233838.1"><vh>Task-1</vh>
 <v t="leo.20181029233841.1"><vh>Introduce-t1</vh>
 <v t="leo.20181029233841.2"><vh>List-t1</vh></v>
@@ -405,7 +425,9 @@ make.start()
 * 取分項目(3)-ungit使用手冊
 
 &lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-1.png"  height="170" width="350"&gt;
-&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-2.png"  height="170" width="350"&gt;</t>
+&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-2.png"  height="170" width="350"&gt;
+
+</t>
 <t tx="leo.20181029234113.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -453,6 +475,7 @@ make.start()
 @others
 
 
+
     &lt;/script&gt;
 &lt;/section&gt;
 
@@ -471,7 +494,8 @@ make.start()
 
 * 3.完成後轉成.exe檔案 , 這項最麻煩 , 遇到一個語法bug, 之後修改了一個python3.7內部檔案
 
-[詳細介紹於此網站中](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/%E9%9A%A8%E6%A9%9F%E5%88%86%E7%B5%84%E4%BB%8B%E9%9D%A2%E6%88%90%E5%93%81.html)</t>
+[詳細介紹於此網站中](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/%E9%9A%A8%E6%A9%9F%E5%88%86%E7%B5%84%E4%BB%8B%E9%9D%A2%E6%88%90%E5%93%81.html)
+</t>
 <t tx="leo.20190111002111.1">&lt;section&gt;
 @others
 						
@@ -508,6 +532,7 @@ make.start()
     &lt;script type="text/template"&gt;
 @others
 
+
     &lt;/script&gt;
 &lt;/section&gt;
 
@@ -516,10 +541,12 @@ make.start()
 </t>
 <t tx="leo.20190111002111.9">### 結尾
 
-老師週四po到blog的文章 , 我在星期日才知道 , 當下很措手不及其他科也還沒準備好 , 假如平時沒有累積一些東西,期中前一周根本不可能做那麼多 , 相對的就有要重修的可能 , 但即使一個人的能力多好 , 時間還是沒有想像中多 , 所以現在還是以團隊合作為目標 , 就如同文章最後的幾行老師要我們設法在同時推送時處理內容衝突並合併改版一樣。</t>
+老師週四po到blog的文章 , 我在星期日才知道 , 當下很措手不及其他科也還沒準備好 , 假如平時沒有累積一些東西,期中前一周根本不可能做那麼多 , 相對的就有要重修的可能 , 但即使一個人的能力多好 , 時間還是沒有想像中多 , 所以現在還是以團隊合作為目標 , 就如同文章最後的幾行老師要我們設法在同時推送時處理內容衝突並合併改版一樣。
+</t>
 <t tx="leo.20190414195732.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
+
 
 
     &lt;/script&gt;
@@ -534,10 +561,12 @@ make.start()
 
 [詳細介紹於此網站中](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/%E5%88%86%E7%B5%84%E7%A8%8B%E5%BC%8F%E4%BF%AE%E6%AD%A3.html)
 
-&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-4.png"  height="250" width="500"&gt;</t>
+&lt;img src="https://mdecadp2018.github.io/site-40623130/images/2019report-4.png"  height="250" width="500"&gt;
+</t>
 <t tx="leo.20190414200114.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
+
 
 
     &lt;/script&gt;
@@ -550,7 +579,8 @@ make.start()
 
 此部分由其他組員組員編寫
 
-[詳細介紹於此網站中](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/ungit%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8A.html)</t>
+[詳細介紹於此網站中](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/ungit%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8A.html)
+</t>
 <t tx="leo.20190414200641.1">&lt;section&gt;
 @others
 						
@@ -577,10 +607,13 @@ make.start()
 下方網址為尋找Lua鍵盤設定碼時找到的網址。
 [keyboard code of Unicode web](http://www.runoob.com/try/try.php?filename=tryjsref_event_key_keycode)
 
-&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/2019-04-07_22-37-07.gif"  height="250" width="500"&gt;</t>
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/2019-04-07_22-37-07.gif"  height="250" width="500"&gt;
+
+</t>
 <t tx="leo.20190414200641.12">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
+
 
 
     &lt;/script&gt;
@@ -599,7 +632,8 @@ make.start()
 
 &lt;small&gt;
 ((左下角寫模擬停止中
-&lt;/small&gt;</t>
+&lt;/small&gt;
+</t>
 <t tx="leo.20190414200641.2">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -622,7 +656,9 @@ make.start()
 
 * 圖形導入
 
-&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/handball_final.png"  height="250" width="500"&gt;</t>
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/handball_final.png"  height="250" width="500"&gt;
+
+</t>
 <t tx="leo.20190414200641.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -681,7 +717,9 @@ make.start()
 
 [回球軌道](https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/content/Extra-add.html)
 
-&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/road_of_handball_go_back.png"  height="250" width="500"&gt;</t>
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/road_of_handball_go_back.png"  height="250" width="500"&gt;
+
+</t>
 <t tx="leo.20190414233558.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -696,10 +734,13 @@ make.start()
 
 內容大致上都有儲存於個人網頁中,就不詳細說明了
 
-[w1](https://mdecadp2018.github.io/site-40623130/content/Week-one.html)、[w2](https://mdecadp2018.github.io/site-40623130/content/Week-two.html)、[w3](https://mdecadp2018.github.io/site-40623130/content/Week-three.html)、[w4](https://mdecadp2018.github.io/site-40623130/content/Week-four.html)、[w5](https://mdecadp2018.github.io/site-40623130/content/Week-five.html)、[w6](https://mdecadp2018.github.io/site-40623130/content/Week-six.html)、[w7](https://mdecadp2018.github.io/site-40623130/content/Week-seven.html)、[w8](https://mdecadp2018.github.io/site-40623130/content/Week-eight.html)</t>
+[w1](https://mdecadp2018.github.io/site-40623130/content/Week-one.html)、[w2](https://mdecadp2018.github.io/site-40623130/content/Week-two.html)、[w3](https://mdecadp2018.github.io/site-40623130/content/Week-three.html)、[w4](https://mdecadp2018.github.io/site-40623130/content/Week-four.html)、[w5](https://mdecadp2018.github.io/site-40623130/content/Week-five.html)、[w6](https://mdecadp2018.github.io/site-40623130/content/Week-six.html)、[w7](https://mdecadp2018.github.io/site-40623130/content/Week-seven.html)、[w8](https://mdecadp2018.github.io/site-40623130/content/Week-eight.html)
+
+</t>
 <t tx="leo.20190414233932.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
+
 
 
     &lt;/script&gt;
@@ -710,6 +751,131 @@ make.start()
 </t>
 <t tx="leo.20190414233932.3">### 取分項目(1.5)-隨機分組介面
 
-&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/team-divider-finil-finish.png"&gt;</t>
+&lt;img src="https://mdekmol.github.io/cd2019a-task1-2019cda_t1_g2/images/team-divider-finil-finish.png"&gt;
+</t>
+<t tx="leo.20190609202217.1">&lt;section&gt;
+@others
+						
+&lt;/section&gt;
+
+</t>
+<t tx="leo.20190609202217.10">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190609202217.11">### 倉儲推送紀錄
+
+[cd2019a-task1-2019cda_t1_g2](https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g2/graphs/contributors)
+
+[scrum-1/cd2019a](https://github.com/scrum-1/cd2019a/graphs/contributors)
+</t>
+<t tx="leo.20190609202217.12">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190609202217.13">### 在小組與班上的貢獻
+
+隨然沒有能成為高階領頭羊的能力但中階的領頭羊還是當得起的，對小組的貢獻可能多於對班上的貢獻，除了較為瑣碎的事，大多都是我在處裡但比起分配工作我比較看重能力...沒有能力在簡單的工作效率還是很差...所以我會想加強自己後幫助想變強的人。
+</t>
+<t tx="leo.20190609202217.14">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190609202217.15">### 自評
+
+學員出席(20%) 20分
+
+Github 倉儲管理(20%) 19分
+
+Onshape 協同操作(20%) 15分
+
+V-rep 模擬(20%) 20分
+
+程式開發(20%) 20分
+
+總分:94分
+</t>
+<t tx="leo.20190609202217.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190609202217.3">### 目錄
+
+* 手足球系統功能
+
+* vrep模擬
+
+* onshape
+
+* 倉儲推送紀錄
+
+* 在小組與班上的貢獻
+
+* 自評
+</t>
+<t tx="leo.20190609202217.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190609202217.5">### 手足球系統功能與Vrep模擬
+
+&lt;img src="https://mdecadp2018.github.io/site-40623130/images/FTB(final).gif"  height="250" width="500"&gt;
+
+[詳細介紹於此網站中](https://mdecadp2018.github.io/site-40623130/content/Vrep%E6%89%8B%E8%B6%B3%E7%90%83-All_Version.html)</t>
+<t tx="leo.20190609202217.8">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190609202217.9">### onshape
+
+由於基本上都是我在處理比較困難的部分，所以有需要更改的圖或是繪圖失誤我會自行修改或是提醒他們更改。
+
+[詳細介紹於此網站中](https://cad.onshape.com/documents/0894dee7161cb625fbf66c24/w/dd82ba727b43d8551157d048/e/4e12526592dd2e271bca4ad7)
+</t>
 </tnodes>
 </leo_file>
