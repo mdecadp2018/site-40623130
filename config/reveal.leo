@@ -201,9 +201,9 @@ QLineEdit#editorLabel {
 <t tx="leo.20180827201556.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
 <t tx="leo.20180827201621.1"></t>
-<t tx="leo.20180827201621.10">## 協同產品設計實習課程期末報告簡報
+<t tx="leo.20180827201621.10">## 協同產品設計實習課程
 
-### 虎科大機械設計工程系
+### 虎科大機械設計工程系-期末報告簡報
 
 二甲-第二組-40623130-陳鉅忠
 
@@ -849,9 +849,9 @@ V-rep 模擬(20%) 20分
 
 * 自評
 
-*結論
+* 結論
 
-*每周心得
+* 每周心得
 </t>
 <t tx="leo.20190609202217.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
