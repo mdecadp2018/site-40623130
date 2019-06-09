@@ -37,6 +37,15 @@
 <v t="leo.20190609202217.12"><vh>contribution_list</vh>
 <v t="leo.20190609202217.13"><vh>contribution</vh></v>
 </v>
+<v t="leo.20190610002509.1"><vh>貢獻(下)</vh>
+<v t="leo.20190610002509.2"><vh>成品</vh></v>
+</v>
+<v t="leo.20190610002510.1"><vh>心得(下)</vh>
+<v t="leo.20190610002510.2"><vh>結尾(下)</vh></v>
+</v>
+<v t="leo.20190610002512.1"><vh>心得2(下)</vh>
+<v t="leo.20190610002512.2"><vh>結尾2(下)</vh></v>
+</v>
 <v t="leo.20190609202217.14"><vh>Goal-list</vh>
 <v t="leo.20190609202217.15"><vh>Goal</vh></v>
 </v>
@@ -791,7 +800,7 @@ make.start()
 </t>
 <t tx="leo.20190609202217.13">### 在小組與班上的貢獻
 
-隨然沒有能成為高階領頭羊的能力但中階的領頭羊還是當得起的，對小組的貢獻可能多於對班上的貢獻，除了較為瑣碎的事，大多都是我在處裡但比起分配工作我比較看重能力...沒有能力在簡單的工作效率還是很差...所以我會想加強自己後幫助想變強的人。
+隨然沒有能成為高階領頭羊的能力但中階的領頭羊還是當得起的，對小組的貢獻可能多於對班上的貢獻，除了較為瑣碎的事，大多都是我在處裡但比起分配工作我比較看重能力...沒有能力在簡單的工作效率還是很差...所以我會想加強自己後幫助也想努力的人。
 </t>
 <t tx="leo.20190609202217.14">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -858,7 +867,9 @@ V-rep 模擬(20%) 20分
 
 &lt;img src="https://mdecadp2018.github.io/site-40623130/images/FTB(final).gif"  height="250" width="500"&gt;
 
-[詳細介紹於此網站中](https://mdecadp2018.github.io/site-40623130/content/Vrep%E6%89%8B%E8%B6%B3%E7%90%83-All_Version.html)</t>
+[詳細介紹於此網站中](https://mdecadp2018.github.io/site-40623130/content/Vrep%E6%89%8B%E8%B6%B3%E7%90%83-All_Version.html)
+
+</t>
 <t tx="leo.20190609202217.8">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -877,5 +888,54 @@ V-rep 模擬(20%) 20分
 
 [詳細介紹於此網站中](https://cad.onshape.com/documents/0894dee7161cb625fbf66c24/w/dd82ba727b43d8551157d048/e/4e12526592dd2e271bca4ad7)
 </t>
+<t tx="leo.20190610002509.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190610002509.2">### 貢獻
+
+
+</t>
+<t tx="leo.20190610002510.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190610002510.2">### 結論
+
+期中過後，充分了解到1+1不一定等於2，但有時候1就可以大於3了...在打程式的過程中我也覺得蠻可怕的，有時候不知不覺就半夜了，沒再打的人可能不了解但是有時候真的就是不能克制自己，就好像賴床一樣醒來都下午了，但最後處理合併跟衝突真的好麻煩...網站上的內容多到懷疑人生
+</t>
+<t tx="leo.20190610002512.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+</t>
+<t tx="leo.20190610002512.2">### 每周心得
+
+內容大致上都有儲存於個人網頁中,就不詳細說明了
+
+[w10](https://mdecadp2018.github.io/site-40623130/content/Week-ten.html)、[w11](https://mdecadp2018.github.io/site-40623130/content/Week-eleven.html)、[w12](https://mdecadp2018.github.io/site-40623130/content/Week-twelve.html)、[w13、w14](https://mdecadp2018.github.io/site-40623130/content/Week-thirteen%20&amp;%20fourteen.html)、[w15](https://mdecadp2018.github.io/site-40623130/content/Week-ffifteen.html)、[w16](https://mdecadp2018.github.io/site-40623130/content/Week-sixteen.html)</t>
 </tnodes>
 </leo_file>
