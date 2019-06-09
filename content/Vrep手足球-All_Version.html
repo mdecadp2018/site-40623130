@@ -654,7 +654,7 @@ end</pre>
     if Ball_s[1] &gt; -0.04753 and Ball_s[2] &lt;  -0.5240 and Ball_s[3] &gt; 0.15735 then
     sim.setObjectPosition(Ball,-1,{-0.03667,  -0.48443, 0.1482})
     end</pre>
-<p><strong>FTB_Version_Final:</strong>修改計分code、刪除大多的測試code、</p>
+<p><strong>FTB_Version_Final:</strong>修改計分code、刪除大多的測試code</p>
 <p><img alt="" height="565" src="./../images/FTB(final).gif" width="1000"/></p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function reborn_ball_count_goal()
     if Ball_s[1] &lt; -0.85 and Ball_s[1] &gt; -0.87 then
@@ -667,11 +667,275 @@ end</pre>
         print[[Player : Computer]]
         print('      '..Computer_G..'     '..Player_G)
     end</pre>
+<p><strong>FTB_Version_Final_EX:</strong>較EX=&gt;extra，原本沒有要做的部分，不過只是改改參數正負號還蠻簡單的，屬於電腦打電腦，bug很多。</p>
+<p><img alt="" height="553" src="./../images/FTB(final_EX).gif" width="1000"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    Ball=sim.getObjectHandle('ball')
+    --computer--
+    Body=sim.getObjectHandle('LSO1')
+    Body2=sim.getObjectHandle('LSO2')
+    Body3=sim.getObjectHandle('LSO3')
+    Body4=sim.getObjectHandle('LSO4')
+    LR1=sim.getObjectHandle('LR1')  
+    LR2=sim.getObjectHandle('LR2')
+    LR3=sim.getObjectHandle('LL3')
+    LR4=sim.getObjectHandle('LR4')
+    L1=sim.getObjectHandle('L1')
+    L2=sim.getObjectHandle('L2')
+    L3=sim.getObjectHandle('L3')
+    L4=sim.getObjectHandle('L4')
+    --computer2--
+    Body_2=sim.getObjectHandle('RSO1')
+    Body2_2=sim.getObjectHandle('RSO2')
+    Body3_2=sim.getObjectHandle('RSO3')
+    Body4_2=sim.getObjectHandle('RSO4')
+    RR1=sim.getObjectHandle('RR1')  
+    RR2=sim.getObjectHandle('RR2')
+    RR3=sim.getObjectHandle('RR3')
+    RR4=sim.getObjectHandle('RR4')
+    R1=sim.getObjectHandle('R1')
+    R2=sim.getObjectHandle('R2')
+    R3=sim.getObjectHandle('R3')
+    R4=sim.getObjectHandle('R4')
+    --goal--
+    Player_G = 0
+    Computer_G = 0
+    --reball--
+    Push_1=sim.getObjectHandle('Push_1')
+    Push_2=sim.getObjectHandle('Push_2')
+end
+
+function sysCall_actuation()
+    message,auxiliaryData=sim.getSimulatorMessage()
+    while message~=-1 do
+        if (message==sim.message_keypress) then   
+            if (auxiliaryData[1]==114) then   --"r"--restart
+              sim.setObjectPosition(Ball,-1,{-0.15, -0.1334, 0.5})
+            end
+        end
+        message,auxiliaryData=sim.getSimulatorMessage()
+    end
+    --computer--
+    Body_s = sim.getObjectPosition(Body,-1)
+    Ball_s = sim.getObjectPosition(Ball,-1)
+    X = Body_s[1] - Ball_s[1]
+    Y = Body_s[2] - Ball_s[2]
+    if 1 then  --C_goalkeeper
+        if X &lt;= 0.02 then
+            sim.setJointTargetVelocity(LR1,-5)
+            sim.setJointTargetVelocity(L1,0)
+        elseif X &gt; 0.02 or X &lt;= 0.01 then
+            sim.setJointTargetVelocity(LR1,5)
+            YYYYY = Y*7
+            sim.setJointTargetVelocity(L1,YYYYY)
+        end
+    end
+
+    Body_s2 = sim.getObjectPosition(Body2,-1)
+    X2_1 = Body_s2[1] - Ball_s[1]
+    Y2_1 = Body_s2[2] - Ball_s[2] - 0.15
+    Y2_2 = Body_s2[2] - Ball_s[2] + 0.15
+    if X2_1 &gt;= 0.01 then --C_second--
+        if Ball_s[2] &lt;= -0.133 then
+            C_K_B_X2()
+        Y2_1 = Y2_1*5
+        sim.setJointTargetVelocity(L2,Y2_1)
+        elseif Ball_s[2] &gt; -0.133 then
+            C_K_B_X2()
+        Y2_2 = Y2_2*5
+        sim.setJointTargetVelocity(L2,Y2_2)
+        end
+    end
+
+    Body_s4 = sim.getObjectPosition(Body4,-1)
+    X4_1 = Body_s4[1] - Ball_s[1]
+    Y4_1 = Body_s4[2] - Ball_s[2] - 0.15
+    Y4_2 = Body_s4[2] - Ball_s[2] + 0.15
+    if X4_1 &gt;= 0.01 then --C_third--
+        if Ball_s[2] &lt;= -0.133 then
+            C_K_B_X4()
+        Y4_1 = Y4_1*3
+        sim.setJointTargetVelocity(L4,Y4_1)
+        elseif Ball_s[2] &gt; -0.133 then
+            C_K_B_X4()
+        Y4_2 = Y4_2*3
+        sim.setJointTargetVelocity(L4,Y4_2)
+        end
+    end
+
+    Body_s3 = sim.getObjectPosition(Body3,-1)
+    X3_1 = Body_s3[1] - Ball_s[1]
+    Y3_1 = Body_s3[2] - Ball_s[2]
+    Y3_2 = Body_s3[2] - Ball_s[2] +0.2487
+    Y3_3 = Body_s3[2] - Ball_s[2] -0.2487
+    if X3_1 &gt;= 0.01 then --C_fourth--
+        if Ball_s[2] &lt; -0.0028 and Ball_s[2] &gt;= -0.2487 then
+            C_K_B_X3()
+        Y3_1 = Y3_1*2.5
+        sim.setJointTargetVelocity(L3,Y3_1)
+        elseif Ball_s[2] &gt;= -0.0028 then
+            C_K_B_X3()
+        Y3_2 = Y3_2*2.5
+        sim.setJointTargetVelocity(L3,Y3_2)
+        elseif Ball_s[2] &lt; -0.2487 then
+            C_K_B_X3()
+        Y3_3 = Y3_3*2.5
+        sim.setJointTargetVelocity(L3,Y3_3)
+        end
+    end
+    --computer2--
+    Body_2_s = sim.getObjectPosition(Body_2,-1)
+    X_2 = Body_2_s[1] - Ball_s[1]
+    Y_2 = Body_2_s[2] - Ball_s[2]
+    if 1 then  --C_goalkeeper
+        if X_2 &gt; -0.02 then
+            sim.setJointTargetVelocity(RR1,-5)
+            sim.setJointTargetVelocity(R1,0)
+            Y_2 = 0
+        elseif X_2 &lt; -0.02 or X_2 &gt; -0.01 then
+            sim.setJointTargetVelocity(RR1,5)
+            YYYYY_2 = Y_2*-7
+            sim.setJointTargetVelocity(R1,YYYYY_2)
+        end
+    end
+
+    Body_2_s2 = sim.getObjectPosition(Body2_2,-1)
+    X2_1_2 = Body_2_s2[1] - Ball_s[1]
+    Y2_1_2 = Body_2_s2[2] - Ball_s[2] - 0.15
+    Y2_2_2 = Body_2_s2[2] - Ball_s[2] + 0.15
+    if X2_1_2 &lt; -0.01 then --C_second--
+        if Ball_s[2] &lt;= -0.133 then
+            C_K_B_X2_2()
+        Y2_1_2 = Y2_1_2*-5
+        sim.setJointTargetVelocity(R2,Y2_1_2)
+        elseif Ball_s[2] &gt; -0.133 then
+            C_K_B_X2_2()
+        Y2_2_2 = Y2_2_2*-5
+        sim.setJointTargetVelocity(R2,Y2_2_2)
+        end
+    end
+
+    Body_2_s4 = sim.getObjectPosition(Body4_2,-1)
+    X4_1_2 = Body_2_s4[1] - Ball_s[1]
+    Y4_1_2 = Body_2_s4[2] - Ball_s[2] - 0.15
+    Y4_2_2 = Body_2_s4[2] - Ball_s[2] + 0.15
+    if X4_1_2 &lt; -0.01 then --C_third--
+        if Ball_s[2] &lt;= -0.133 then
+            C_K_B_X4_2()
+        Y4_1_2 = Y4_1_2*-3
+        sim.setJointTargetVelocity(R4,Y4_1_2)
+        elseif Ball_s[2] &gt; -0.133 then
+            C_K_B_X4_2()
+        Y4_2_2 = Y4_2_2*-3
+        sim.setJointTargetVelocity(R4,Y4_2_2)
+        end
+    end
+
+    Body_2_s3 = sim.getObjectPosition(Body3_2,-1)
+    X3_1_2 = Body_2_s3[1] - Ball_s[1]
+    Y3_1_2 = Body_2_s3[2] - Ball_s[2]
+    Y3_2_2 = Body_2_s3[2] - Ball_s[2] +0.2487
+    Y3_3_2 = Body_2_s3[2] - Ball_s[2] -0.2487
+    if X3_1_2 &lt; 0.01 then --C_fourth--
+        if Ball_s[2] &lt; -0.0028 and Ball_s[2] &gt;= -0.2487 then
+            C_K_B_X3_2()
+        Y3_1_2 = Y3_1_2*-2.5
+        sim.setJointTargetVelocity(R3,Y3_1_2)
+        elseif Ball_s[2] &gt;= -0.0028 then
+            C_K_B_X3_2()
+        Y3_2_2 = Y3_2_2*-2.5
+        sim.setJointTargetVelocity(R3,Y3_2_2)
+        elseif Ball_s[2] &lt; -0.2487 then
+            C_K_B_X3_2()
+        Y3_3_2 = Y3_3_2*-2.5
+        sim.setJointTargetVelocity(R3,Y3_3_2)
+        end
+    end
+    --reborn_ball &amp; count goal--
+    reborn_ball_count_goal()
+end
+function C_K_B_X2() --C_second_kick--
+    if X2_1 &lt; 0.06 then
+    sim.setJointTargetVelocity(LR2,-5)
+    elseif X2_1 &gt; 0.03 then
+    sim.setJointTargetVelocity(LR2,5)
+    end
+end
+function C_K_B_X3() --C_third_kcik--
+    if X3_1 &lt; 0.06 then
+    sim.setJointTargetVelocity(LR3,-5)
+    elseif X3_1 &gt; 0.03 then
+    sim.setJointTargetVelocity(LR3,5)
+    end
+end
+function C_K_B_X4() --C_fourth_kick--
+    if X4_1 &lt; 0.06 then
+    sim.setJointTargetVelocity(LR4,-5)
+    elseif X4_1 &gt; 0.03 then
+    sim.setJointTargetVelocity(LR4,5)
+    end
+end
+function C_K_B_X2_2() --C_2_second_kick--
+    if X2_1_2 &lt; -0.03 then
+    sim.setJointTargetVelocity(RR2,5)
+    elseif X2_1_2 &gt; -0.03 then
+    sim.setJointTargetVelocity(RR2,-5)
+    end
+end
+function C_K_B_X3_2() --C_2_third_kcik--
+    if X3_1_2 &lt; -0.03 then
+    sim.setJointTargetVelocity(RR3,5)
+    elseif X3_1_2 &gt; -0.03 then
+    sim.setJointTargetVelocity(RR3,-5)
+    end
+end
+function C_K_B_X4_2() --C_2_fourth_kick--
+    if X4_1_2 &lt; -0.03 then
+    sim.setJointTargetVelocity(RR4,5)
+    elseif X4_1_2 &gt; -0.03 then
+    sim.setJointTargetVelocity(RR4,-5)
+    end
+end
+function reborn_ball_count_goal()
+    if Ball_s[1] &lt; -0.85 and Ball_s[1] &gt; -0.87 then
+        Player_G = Player_G + 1
+    end    
+    if Ball_s[1] &gt;= 0.61 and Ball_s[1] &lt; 0.63 then
+        Computer_G = Computer_G + 1
+    end
+    if Ball_s[1] &lt; -0.85 or Ball_s[1] &gt;= 0.61 then
+        print[[Player : Computer]]
+        print('      '..Computer_G..'     '..Player_G)
+    end
+
+    if Ball_s[1] &gt; 0.905 and Ball_s[2] &lt; -0.069 and Ball_s[3] &lt; 0.036 then
+        sim.setJointTargetVelocity(Push_1,1)
+    elseif Ball_s[3] &gt; 0.036 then
+        sim.setJointTargetVelocity(Push_1,-1)
+    end
+    if Ball_s[1] &lt; -1.15 and Ball_s[2] &lt; -0.123 and Ball_s[3] &lt; 0.036 then
+        sim.setJointTargetVelocity(Push_2,-1)
+    elseif Ball_s[3] &gt; 0.036 then
+        sim.setJointTargetVelocity(Push_2,1)
+    end
+
+    if Ball_s[1] &lt; -1.156 and Ball_s[2] &gt; 0.163 and Ball_s[3] &gt; 0.058 then
+    sim.setObjectPosition(Ball,-1,{-0.20361, 0.2739, 0.15735})
+    end
+    if Ball_s[1] &lt; -0.20361 and Ball_s[2] &gt; 0.2740 and Ball_s[3] &gt; 0.15735 then
+    sim.setObjectPosition(Ball,-1,{-0.2049, 0.23, 0.1482})
+    end
+    if Ball_s[1] &gt; 0.9056 and Ball_s[2] &lt;  -0.4247 and Ball_s[3] &gt; 0.0592 then
+    sim.setObjectPosition(Ball,-1,{-0.043425,  -0.60401, 0.15735})
+    end
+    if Ball_s[1] &gt; -0.04753 and Ball_s[2] &lt;  -0.5240 and Ball_s[3] &gt; 0.15735 then
+    sim.setObjectPosition(Ball,-1,{-0.03667,  -0.48443, 0.1482})
+    end
+end</pre>
 <p><strong>影片皆屬於後面幾個版本的，其餘影片於15周心得中</strong></p>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="//www.youtube.com/embed/AlJDwybClS8" width="560"></iframe></p>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="//www.youtube.com/embed/HpKoChBwPaw" width="560"></iframe></p>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="//www.youtube.com/embed/v7auUIJMlGg" width="560"></iframe></p>
 <p><strong>結論</strong>:很累...</p>
 <p>會決定用Vrep內設的Lua編寫是因為他的運行速度較快以及編譯叫好懂，雖然有運算的上限。最一開始是從玩家的上下左右開始編寫，之後參考28號同學的電腦回擊寫法後也寫了一個類似的Lua版本但之後發現還可以再修短，之後慢慢地就把全部的code都寫好了，即使到現在計分的判斷還是會有bug原本是用範圍判定之後改成小範圍判定這樣就精準但還是會有多算的時候。</p>
-<p>之後是最重要且最需要解釋的:我們的回球機構一開始就有問題所以才會寫一個過球門救回R點的code版本後來加入機構後嘗試寫個正常的版本，但距離太遠+斜度太過+球含有很0.75的彈性係數，這導致球根本上不去或是飛出軌道...我想到的解決方法是加上蓋子以及在球於軌道中時寫個判斷式讓球傳送到離洞口較近的下坡，想不到球一開始就過不了洞，之後又寫了個讓球能滾出去的code，這是偷吃步的方法也是利用程式輔助機構的方法，雖然很濺但確實可行。</p>
-<br />Vrep手足球-lua << <a href='Vrep手足球-lua.html'>Previous</a> <a href='Vrep手足球-注意事項.html'>Next</a> >> Vrep手足球-注意事項</section></div></body></html>
+<p>之後是最重要且最需要解釋的:我們的回球機構一開始就有問題所以才會寫一個過球門救回R點的code版本後來加入機構後嘗試寫個正常的版本，但距離太遠+斜度太過+球含有很0.75的彈性係數，這導致球根本上不去或是飛出軌道...我想到的解決方法是加上蓋子以及在球於軌道中時寫個判斷式讓球傳送到離洞口較近的下坡，想不到球一開始就過不了洞，之後又寫了個讓球能滾出去的code，這是偷吃步的方法也是利用程式輔助機構的方法，雖然很濺但確實可行。</p><br />Vrep手足球-lua << <a href='Vrep手足球-lua.html'>Previous</a> <a href='Vrep手足球-注意事項.html'>Next</a> >> Vrep手足球-注意事項</section></div></body></html>
