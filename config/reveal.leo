@@ -37,9 +37,6 @@
 <v t="leo.20190609202217.12"><vh>contribution_list</vh>
 <v t="leo.20190609202217.13"><vh>contribution</vh></v>
 </v>
-<v t="leo.20190610002509.1"><vh>貢獻(下)</vh>
-<v t="leo.20190610002509.2"><vh>成品</vh></v>
-</v>
 <v t="leo.20190610002510.1"><vh>心得(下)</vh>
 <v t="leo.20190610002510.2"><vh>結尾(下)</vh></v>
 </v>
@@ -204,7 +201,7 @@ QLineEdit#editorLabel {
 <t tx="leo.20180827201556.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
 <t tx="leo.20180827201621.1"></t>
-<t tx="leo.20180827201621.10">## 協同產品設計實習課程簡報
+<t tx="leo.20180827201621.10">## 協同產品設計實習課程期末報告簡報
 
 ### 虎科大機械設計工程系
 
@@ -851,6 +848,10 @@ V-rep 模擬(20%) 20分
 * 在小組與班上的貢獻
 
 * 自評
+
+*結論
+
+*每周心得
 </t>
 <t tx="leo.20190609202217.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -888,22 +889,6 @@ V-rep 模擬(20%) 20分
 
 [詳細介紹於此網站中](https://cad.onshape.com/documents/0894dee7161cb625fbf66c24/w/dd82ba727b43d8551157d048/e/4e12526592dd2e271bca4ad7)
 </t>
-<t tx="leo.20190610002509.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-
-
-
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-</t>
-<t tx="leo.20190610002509.2">### 貢獻
-
-
-</t>
 <t tx="leo.20190610002510.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -936,6 +921,8 @@ V-rep 模擬(20%) 20分
 
 內容大致上都有儲存於個人網頁中,就不詳細說明了
 
-[w10](https://mdecadp2018.github.io/site-40623130/content/Week-ten.html)、[w11](https://mdecadp2018.github.io/site-40623130/content/Week-eleven.html)、[w12](https://mdecadp2018.github.io/site-40623130/content/Week-twelve.html)、[w13、w14](https://mdecadp2018.github.io/site-40623130/content/Week-thirteen%20&amp;%20fourteen.html)、[w15](https://mdecadp2018.github.io/site-40623130/content/Week-ffifteen.html)、[w16](https://mdecadp2018.github.io/site-40623130/content/Week-sixteen.html)</t>
+[w10](https://mdecadp2018.github.io/site-40623130/content/Week-ten.html)、[w11](https://mdecadp2018.github.io/site-40623130/content/Week-eleven.html)、[w12](https://mdecadp2018.github.io/site-40623130/content/Week-twelve.html)、[w13、w14](https://mdecadp2018.github.io/site-40623130/content/Week-thirteen%20&amp;%20fourteen.html)、[w15](https://mdecadp2018.github.io/site-40623130/content/Week-ffifteen.html)、[w16](https://mdecadp2018.github.io/site-40623130/content/Week-sixteen.html)
+
+</t>
 </tnodes>
 </leo_file>
