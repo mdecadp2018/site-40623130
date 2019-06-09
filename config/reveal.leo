@@ -25,11 +25,11 @@
 <v t="leo.20190609202217.2"><vh>LIST-LIST</vh>
 <v t="leo.20190609202217.3"><vh>List-t1</vh></v>
 </v>
-<v t="leo.20190609202217.4"><vh>FTB-LIST</vh>
-<v t="leo.20190609202217.5"><vh>FTB</vh></v>
-</v>
 <v t="leo.20190609202217.8"><vh>Draw-list</vh>
 <v t="leo.20190609202217.9"><vh>Draw</vh></v>
+</v>
+<v t="leo.20190609202217.4"><vh>FTB-LIST</vh>
+<v t="leo.20190609202217.5"><vh>FTB</vh></v>
 </v>
 <v t="leo.20190609202217.10"><vh>Github_list</vh>
 <v t="leo.20190609202217.11"><vh>Github</vh></v>
@@ -837,11 +837,11 @@ V-rep 模擬(20%) 20分
 </t>
 <t tx="leo.20190609202217.3">### 目錄
 
-* 手足球系統功能
+* onshape
 
 * vrep模擬
 
-* onshape
+* 手足球系統功能
 
 * 倉儲推送紀錄
 
