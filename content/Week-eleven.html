@@ -82,19 +82,19 @@ $(function(){
 <div class="syntaxhighlighter py" id="highlighter_601206">
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># encoding=utf8
 import re
- 
+ 
 rep = {"h1": "h2", "h2": "h3", "h3": "h4"} # define desired replacements here
- 
+ 
 # use these three lines to do the replacement
 rep = dict((re.escape(k), v) for k, v in rep.items())
 pattern = re.compile("|".join(rep.keys()))
- 
+ 
 #text = pattern.sub(lambda m: rep[re.escape(m.group(0))], text),editing by 40623130
- 
+ 
 result = pattern.sub(lambda m: rep[re.escape(m.group(0))],"""
- 
+ 
 """)
- 
+ 
 print(result)</pre>
 </div>
 </div>

@@ -79,9 +79,9 @@ $(function(){
 <p><img alt="" height="864" src="https://raw.githubusercontent.com/mdecadp2018/site-40623130/gh-pages/v-rep/Pinball/p37_01-40-10.png" width="585"/></p>
 <p>期末測驗影片</p>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="//www.youtube.com/embed/63BsSbAXlHY" width="560"></iframe></p>
-<p>ttt檔案 : <a href="https://github.com/mdecadp2018/site-40623130/blob/gh-pages/v-rep/Pinball/final.ttt">https://github.com/mdecadp2018/site-40623130/blob/gh-pages/v-rep/Pinball/final.ttt</a></p>
-<p>個人繪製圖檔  : <a href="https://cad.onshape.com/documents/b726f61cfcaa678426433196/w/5c0a1613f58c18a8a284db0d/e/c6adf6fbbf04b9337b588915" rel="nofollow">https://cad.onshape.com/documents/b726f61cfcaa678426433196/w/5c0a1613f58c18a8a284db0d/e/c6adf6fbbf04b9337b588915</a> </p>
-<p>組員繪製圖檔位置 : <a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g2/issues/3">https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g2/issues/3</a></p>
+<p>ttt檔案 : <a href="https://github.com/mdecadp2018/site-40623130/blob/gh-pages/v-rep/Pinball/final.ttt">https://github.com/mdecadp2018/site-40623130/blob/gh-pages/v-rep/Pinball/final.ttt</a></p>
+<p>個人繪製圖檔 : <a href="https://cad.onshape.com/documents/b726f61cfcaa678426433196/w/5c0a1613f58c18a8a284db0d/e/c6adf6fbbf04b9337b588915" rel="nofollow">https://cad.onshape.com/documents/b726f61cfcaa678426433196/w/5c0a1613f58c18a8a284db0d/e/c6adf6fbbf04b9337b588915</a></p>
+<p>組員繪製圖檔位置 : <a href="https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g2/issues/3">https://github.com/mdekmol/cd2019a-task1-2019cda_t1_g2/issues/3</a></p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
     R1= sim.getObjectHandle('R1')
     R2= sim.getObjectHandle('R2')
@@ -344,4 +344,390 @@ function brown()
     end
 end
 </pre>
-<p></p><br />Vrep手足球-注意事項 << <a href='Vrep手足球-注意事項.html'>Previous</a> </section></div></body></html>
+<p>↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓</p>
+<p>New Version21</p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    R1= sim.getObjectHandle('R1')
+    R2= sim.getObjectHandle('R2')
+    L1= sim.getObjectHandle('L1')
+    L2= sim.getObjectHandle('L2')
+    Hit= sim.getObjectHandle('Hit')
+    Ball=sim.getObjectHandle('ball')
+    Ball1=sim.getObjectHandle('ball1')
+    Ball2=sim.getObjectHandle('ball2')
+    Ball3=sim.getObjectHandle('ball3')
+    HIT=sim.getObjectHandle('HIT')
+    R1B=sim.getObjectHandle('RR1')
+    L1B=sim.getObjectHandle('LL1')
+    Kick_v_1=0
+    Kick_v_2=0
+    dVel=0.5
+    Hit_v=0
+    score=0
+    star=0
+    Ball2_died =0
+    Ball2_died_1 =0
+    Ball2_died_2 =0
+    Ball2_died_3 =0
+end
+function sysCall_actuation()
+    Ball_s = sim.getObjectPosition(Ball,-1)
+    Ball_s1 = sim.getObjectPosition(Ball1,-1)
+    Ball_s2 = sim.getObjectPosition(Ball2,-1)
+    Ball_s3 = sim.getObjectPosition(Ball3,-1)
+    message,auxiliaryData=sim.getSimulatorMessage()
+    while message~=-1 do
+        if (message==sim.message_keypress) then   
+            if (auxiliaryData[1]==114) then   --"r"--restart
+                sim.setObjectPosition(Ball,-1,{0.4058, -0.39168, 0.08596})
+                sim.setObjectPosition(Ball1,-1,{1.5075, -1.0893, 0.025})
+                sim.setObjectPosition(Ball2,-1,{1.5016, -1.0053, 0.025})
+                sim.setObjectPosition(Ball3,-1,{1.4165, -1.0103, 0.025})
+                score = 0
+                star =0 
+                Ball2_died =0
+            elseif (auxiliaryData[1]==97) then   --"L1&amp;L2"
+                Kick_v_2 = Kick_v_2 + dVel*50
+                if (Kick_v_2 &lt; 0) then
+                   Kick_v_2 = 0
+                end
+            elseif (auxiliaryData[1]==108) then   --"R1&amp;R2"
+                Kick_v_1 = Kick_v_1 - dVel*50
+                if (Kick_v_1 &gt; 0) then
+                    Kick_v_1 = 0
+                end
+            elseif (auxiliaryData[1]==2007) then   --"push"
+                Hit_v = Hit_v + dVel*10
+            elseif (auxiliaryData[1]==49) then   --"purchase_ball1"
+                if score &lt;= 0 then
+                    print('You dont have enough score!')
+                    sim.setObjectPosition(Ball1,-1,{1.5075, -1.0893, 0.025})
+                elseif Ball_s1[1] &lt;= 0.6 and Ball_s1[2] &gt;= -0.5 and Ball_s1[3] &gt;= 0.06 then
+                        print('The ball is ready!')
+                elseif score &gt;= 5000 then
+                    sim.setObjectPosition(Ball1,-1,{0.4058, -0.39168, 0.08596})
+                    score = score - 5000
+                end
+            elseif (auxiliaryData[1]==50) then   --"purchase_ball2"
+                if score &lt;= 0 then
+                    print('You dont have enough score!')
+                    sim.setObjectPosition(Ball2,-1,{1.5016, -1.0053, 0.025})
+                elseif Ball_s2[1] &lt;= 0.6 and Ball_s2[2] &gt;= -0.5 and Ball_s2[3] &gt;= 0.06 then
+                    print('The ball is ready!')
+                elseif score &gt;= 1000 then
+                    sim.setObjectPosition(Ball2,-1,{0.4058, -0.39168, 0.08596})
+                    score = score -1000
+                end
+            elseif (auxiliaryData[1]==51) then   --"purchase_ball3"
+                if score &lt;= 0 then
+                    print('You dont have enough score!')
+                    sim.setObjectPosition(Ball3,-1,{1.4165, -1.0103, 0.025})
+                elseif Ball_s3[1] &lt;= 0.6 and Ball_s3[2] &gt;= -0.5 and Ball_s3[3] &gt;= 0.06 then
+                    print('The ball is ready!')
+                elseif score &gt;= 2500 then
+                    sim.setObjectPosition(Ball3,-1,{0.4058, -0.39168, 0.08596})
+                    score = score -2500
+                end
+            elseif (auxiliaryData[1]==54) then
+                score = score +5000
+            end
+        end
+        message,auxiliaryData=sim.getSimulatorMessage()
+    end
+    sim.setJointTargetVelocity(Hit,Hit_v)
+    sim.setJointTargetVelocity(R1,Kick_v_1)
+    sim.setJointTargetVelocity(L1,Kick_v_2)
+    sim.setJointTargetVelocity(R2,Kick_v_1)
+    sim.setJointTargetVelocity(L2,Kick_v_2)
+    HIT_s = sim.getObjectPosition(HIT,-1)
+    R1B_s = sim.getObjectPosition(R1B,-1)
+    L1B_s = sim.getObjectPosition(L1B,-1)
+    if HIT_s[2] &gt;= 0.41 and HIT_s[3] &gt;= 0.26 then
+        Hit_v = Hit_v - dVel*10
+    end
+    if R1B_s[3] &gt;= 0.20168 then
+       Kick_v_1 = Kick_v_1 + dVel*50
+    end
+    if L1B_s[3] &gt;= 0.2041 then
+       Kick_v_2 = Kick_v_2 - dVel*50
+    end
+    court_score()
+end
+function court_score()
+    blue()
+    green()
+    yellow()
+    red()
+    brown()
+    Born1_double()
+    Born2()
+    Born3()
+    died()
+    stars()
+    stay()
+    buff()
+    print('Rank'..' : '..star)
+    if Ball_s[3] &gt;= 0 then
+        print('score'..' : '..score)
+    elseif Ball_s[3] &lt;= 0 then
+        print('Game over')
+        if score &gt; 0 then
+            sim.setObjectPosition(Ball,-1,{0.4058, -0.39168, 0.08596})
+            print('Resurgence')
+            sim.setObjectPosition(Ball1,-1,{1.5075,-1.0893,0.025})
+            sim.setObjectPosition(Ball2,-1,{1.5016,-1.0053,0.025})
+            sim.setObjectPosition(Ball3,-1,{1.4165,-1.0103,0.025})
+        end
+    end
+end
+function blue()
+    if Ball_s[1] &lt;= -0.668 and Ball_s[2] &gt;= 1.0914 and Ball_s[3] &gt;= 0.3475 then
+        score = score + 25
+    elseif Ball_s1[1] &lt;= -0.668 and Ball_s1[2] &gt;= 1.0914 and Ball_s1[3] &gt;= 0.3475 then
+        score = score + 50
+    elseif Ball_s2[1] &lt;= -0.668 and Ball_s2[2] &gt;= 1.0914 and Ball_s2[3] &gt;= 0.3475 then
+        score = score + 25
+    elseif Ball_s3[1] &lt;= -0.668 and Ball_s3[2] &gt;= 1.0914 and Ball_s3[3] &gt;= 0.3475 then
+        score = score + 25
+    end
+end
+function Born2()
+    if Ball_s[1] &lt;= -0.5 and Ball_s[2] &gt;= 0.7 and Ball_s[3] &gt;= 0.26 and Ball_s[2] &lt;= 0.8 and Ball_s[1] &gt;= -0.58 then
+        score = score + 20
+        if Ball_s2[1] &gt;= 0.35 and Ball_s2[2] &lt;= -0.3 and Ball_s2[3] &lt;= 0.08 then
+            sim.setObjectPosition(Ball2,-1,{0.4058, -0.39168, 0.08596})
+        end
+    elseif Ball_s1[1] &lt;= -0.5 and Ball_s1[2] &gt;= 0.7 and Ball_s1[3] &gt;= 0.26 and Ball_s1[2] &lt;= 0.8 and Ball_s1[1] &gt;= -0.58 then
+        score = score + 40
+        if Ball_s2[1] &gt;= 0.35 and Ball_s2[2] &lt;= -0.3 and Ball_s2[3] &lt;= 0.08 then
+            sim.setObjectPosition(Ball2,-1,{0.4058, -0.39168, 0.08596})
+        end
+    elseif Ball_s2[1] &lt;= -0.5 and Ball_s2[2] &gt;= 0.7 and Ball_s2[3] &gt;= 0.26 and Ball_s2[2] &lt;= 0.8 and Ball_s2[1] &gt;= -0.58 then
+        score = score + 30
+    elseif Ball_s3[1] &lt;= -0.5 and Ball_s3[2] &gt;= 0.7 and Ball_s3[3] &gt;= 0.26 and Ball_s3[2] &lt;= 0.8 and Ball_s3[1] &gt;= -0.58 then
+        score = score + 20
+        if Ball_s2[1] &gt;= 0.35 and Ball_s2[2] &lt;= -0.3 and Ball_s2[3] &lt;= 0.08 then
+            sim.setObjectPosition(Ball2,-1,{0.4058, -0.39168, 0.08596})
+        end
+    end
+end
+function Born1_double()
+    if Ball_s[1] &gt;= 0.24 and Ball_s[2] &gt;= 0.955 and Ball_s[3] &gt;= 0.305 and Ball_s[1] &lt;= 0.3 and Ball_s[2] &lt;= 1 then
+        score = score + 100
+        if Ball_s1[1] &gt;= 0.35 and Ball_s1[2] &lt;= -0.3 and Ball_s1[3] &lt;= 0.08 then
+            sim.setObjectPosition(Ball1,-1,{0.4058, -0.39168, 0.08596})
+        end
+    elseif Ball_s1[1] &gt;= 0.24 and Ball_s1[2] &gt;= 0.955 and Ball_s1[3] &gt;= 0.305 and Ball_s1[1] &lt;= 0.3 and Ball_s1[2] &lt;= 1 then
+        score = score + 300
+    elseif Ball_s2[1] &gt;= 0.24 and Ball_s2[2] &gt;= 0.955 and Ball_s2[3] &gt;= 0.305 and Ball_s2[1] &lt;= 0.3 and Ball_s2[2] &lt;= 1 then
+        score = score + 100
+        if Ball_s1[1] &gt;= 0.35 and Ball_s1[2] &lt;= -0.3 and Ball_s1[3] &lt;= 0.08 then
+            sim.setObjectPosition(Ball1,-1,{0.4058, -0.39168, 0.08596})
+        end
+    elseif Ball_s3[1] &gt;= 0.24 and Ball_s3[2] &gt;= 0.955 and Ball_s3[3] &gt;= 0.305 and Ball_s3[1] &lt;= 0.3 and Ball_s3[2] &lt;= 1 then
+        score = score + 100
+        if Ball_s1[1] &gt;= 0.35 and Ball_s1[2] &lt;= -0.3 and Ball_s1[3] &lt;= 0.08 then
+            sim.setObjectPosition(Ball1,-1,{0.4058, -0.39168, 0.08596})
+        end
+    end
+end
+function Born3()
+    if Ball_s[1] &gt;= 0.0154 and Ball_s[2] &gt;= 0.78 and Ball_s[3] &gt;= 0.2991 and Ball_s[2] &lt;= 0.84 and Ball_s[1] &lt;= 0.0754 then
+        score = score + 50
+        if Ball_s3[1] &gt;= 0.35 and Ball_s3[2] &lt;= -0.3 and Ball_s3[3] &lt;= 0.08 then
+            sim.setObjectPosition(Ball3,-1,{0.4058, -0.39168, 0.08596})
+        end
+    elseif Ball_s1[1] &gt;= 0.0154 and Ball_s1[2] &gt;= 0.78 and Ball_s1[3] &gt;= 0.2991 and Ball_s1[2] &lt;= 0.84 and Ball_s1[1] &lt;= 0.0754 then
+        score = score + 100
+        if Ball_s3[1] &gt;= 0.35 and Ball_s3[2] &lt;= -0.3 and Ball_s3[3] &lt;= 0.08 then
+            sim.setObjectPosition(Ball3,-1,{0.4058, -0.39168, 0.08596})
+        end
+    elseif Ball_s2[1] &gt;= 0.0154 and Ball_s2[2] &gt;= 0.78 and Ball_s2[3] &gt;= 0.2991 and Ball_s2[2] &lt;= 0.84 and Ball_s2[1] &lt;= 0.0754 then
+        score = score + 75
+        if Ball_s3[1] &gt;= 0.35 and Ball_s3[2] &lt;= -0.3 and Ball_s3[3] &lt;= 0.08 then
+            sim.setObjectPosition(Ball3,-1,{0.4058, -0.39168, 0.08596})
+        end
+    elseif Ball_s3[1] &gt;= 0.0154 and Ball_s3[2] &gt;= 0.78 and Ball_s3[3] &gt;= 0.2991 and Ball_s3[2] &lt;= 0.84 and Ball_s3[1] &lt;= 0.0754 then
+        score = score + 50
+    end
+end
+function died()
+    if Ball_s[1] &lt;= -0.1749 and Ball_s[2] &lt;= -0.275 and Ball_s[3] &gt;= 0.07 and Ball_s[1] &gt;= -0.248 and Ball_s[2] &gt;= -0.345 then
+        if score &gt;= 2500 then
+            sim.setObjectPosition(Ball,-1,{0.4058, -0.39168, 0.08596})
+        elseif score &lt; 2500 then
+            sim.setObjectPosition(Ball,-1,{1.4205,-1.0873,-1})
+        end
+        score = score - 2500
+    elseif Ball_s1[1] &lt;= -0.1749 and Ball_s1[2] &lt;= -0.275 and Ball_s1[3] &gt;= 0.07 and Ball_s1[1] &gt;= -0.248 and Ball_s1[2] &gt;= -0.345 then
+        sim.setObjectPosition(Ball1,-1,{1.5075,-1.0893,0.025})
+        score = score - 500
+    elseif Ball_s2[1] &lt;= -0.1749 and Ball_s2[2] &lt;= -0.275 and Ball_s2[3] &gt;= 0.07 and Ball_s2[1] &gt;= -0.248 and Ball_s2[2] &gt;= -0.345 then
+        sim.setObjectPosition(Ball2,-1,{1.5016,-1.0053,0.025})
+        score = score - 250
+        Ball2_died = Ball2_died +1
+    elseif Ball_s3[1] &lt;= -0.1749 and Ball_s3[2] &lt;= -0.275 and Ball_s3[3] &gt;= 0.07 and Ball_s3[1] &gt;= -0.248 and Ball_s3[2] &gt;= -0.345 then
+        if  score &gt;= 5000 then
+            sim.setObjectPosition(Ball3,-1,{0.4058,-0.39168,0.08596})
+            score = score - 1000
+        elseif score &lt; 5000 then
+            sim.setObjectPosition(Ball3,-1,{1.4165,-1.0103,0.025})
+            score = score + 1000
+        end
+    end
+end
+function green()
+    if Ball_s[2] &lt;= -0.1 and Ball_s[3] &gt;= 0.102 then
+        if Ball_s[1] &lt;= -0.55 and Ball_s[1] &gt;= -0.585 then
+            if score &lt; 2500 then
+                score = score +1000
+            elseif score &gt;= 3000 then 
+                score = score -500
+            end
+        elseif Ball_s[1] &lt;= 0.165 and Ball_s[1] &gt;= 0.125 then
+            if score &lt; 2500 then
+                score = score +1000
+            elseif score &gt;= 3000 then 
+                score = score -500
+            end
+        end
+    elseif Ball_s1[2] &lt;= -0.1 and Ball_s1[3] &gt;= 0.102 then
+        if Ball_s1[1] &lt;= -0.55 and Ball_s1[1] &gt;= -0.585 then
+            score = score +100
+        elseif Ball_s1[1] &lt;= 0.165  and Ball_s1[1] &gt;= 0.125 then
+            score = score +100
+        end
+    elseif Ball_s2[2] &lt;= -0.1 and Ball_s2[3] &gt;= 0.102 then
+        if Ball_s2[1] &lt;= -0.55 and Ball_s2[1] &gt;= -0.585 then
+            score = score +25
+        elseif Ball_s2[1] &lt;= 0.165  and Ball_s2[1] &gt;= 0.125 then
+            score = score +25
+        end
+    elseif Ball_s3[2] &lt;= -0.1 and Ball_s3[3] &gt;= 0.102 then
+        if Ball_s3[1] &lt;= -0.55 and Ball_s3[1] &gt;= -0.585 then
+            score = score +25
+        elseif Ball_s3[1] &lt;= 0.165  and Ball_s3[1] &gt;= 0.125 then
+            score = score +25
+        end
+    end
+end
+function yellow()
+    if Ball_s[1] &lt;= 0.165 and Ball_s[1] &gt;= 0.125 and Ball_s[2] &lt;= 1.25 and Ball_s[2] &gt;= 1.13 and Ball_s[3] &gt;= 0.329 then
+        score = score + 10
+    elseif Ball_s1[1] &lt;= 0.165 and Ball_s1[1] &gt;= 0.125 and Ball_s1[2] &lt;= 1.25 and Ball_s1[2] &gt;= 1.13 and Ball_s1[3] &gt;= 0.329 then
+        score = score + 20
+    elseif Ball_s2[1] &lt;= 0.165 and Ball_s2[1] &gt;= 0.125 and Ball_s2[2] &lt;= 1.25 and Ball_s2[2] &gt;= 1.13 and Ball_s2[3] &gt;= 0.329 then
+        score = score + 10
+    elseif Ball_s3[1] &lt;= 0.165 and Ball_s3[1] &gt;= 0.125 and Ball_s3[2] &lt;= 1.25 and Ball_s3[2] &gt;= 1.13 and Ball_s3[3] &gt;= 0.329 then
+        score = score + 10
+    end
+end
+function red()
+    if Ball_s[1] &lt;= -0.21 and Ball_s[1] &gt;= -0.233 and Ball_s[2] &lt;= 0.45 and Ball_s[2] &gt;= 0.38 and Ball_s[3] &gt;= 0.204 then
+        score = score + 10
+    elseif Ball_s1[1] &lt;= -0.21 and Ball_s1[1] &gt;= -0.233 and Ball_s1[2] &lt;= 0.45 and Ball_s1[2] &gt;= 0.38 and Ball_s1[3] &gt;= 0.204 then
+        score = score + 20
+    elseif Ball_s2[1] &lt;= -0.21 and Ball_s2[1] &gt;= -0.233 and Ball_s2[2] &lt;= 0.45 and Ball_s2[2] &gt;= 0.38 and Ball_s2[3] &gt;= 0.204 then
+        score = score + 10
+    elseif Ball_s3[1] &lt;= -0.21 and Ball_s3[1] &gt;= -0.233 and Ball_s3[2] &lt;= 0.45 and Ball_s3[2] &gt;= 0.38 and Ball_s3[3] &gt;= 0.204 then
+        score = score + 10
+    end
+end
+function brown()
+    if Ball_s[2] &lt;= 0.275 and Ball_s[2] &gt;= 0.23 and Ball_s[3] &gt;= 0.17 then
+        if Ball_s[1] &gt;= -0.735 and Ball_s[1] &lt;= -0.645 then
+            score = score - 25
+            sim.setObjectPosition(Ball1,-1,{1.5075,-1.0893,0})
+            sim.setObjectPosition(Ball2,-1,{1.5016,-1.0053,0})
+            sim.setObjectPosition(Ball3,-1,{1.4165,-1.0103,0})
+        elseif Ball_s[1] &gt;= 0.22 and Ball_s[1] &lt;= 0.315 then
+            score = score - 25
+            sim.setObjectPosition(Ball1,-1,{1.5075,-1.0893,0})
+            sim.setObjectPosition(Ball2,-1,{1.5016,-1.0053,0})
+            sim.setObjectPosition(Ball3,-1,{1.4165,-1.0103,0})
+        end
+    elseif Ball_s1[2] &lt;= 0.275 and Ball_s1[2] &gt;= 0.23 and Ball_s1[3] &gt;= 0.17 then
+        if Ball_s1[1] &gt;= -0.735 and Ball_s1[1] &lt;= -0.645 then
+            score = score - 50
+        elseif Ball_s1[1] &gt;= 0.22 and Ball_s1[1] &lt;= 0.315 then
+            score = score - 50
+        end
+    elseif Ball_s2[2] &lt;= 0.275 and Ball_s2[2] &gt;= 0.23 and Ball_s2[3] &gt;= 0.17 then
+        if Ball_s2[1] &gt;= -0.735 and Ball_s2[1] &lt;= -0.645 then
+            score = score - 25
+        elseif Ball_s2[1] &gt;= 0.22 and Ball_s2[1] &lt;= 0.315 then
+            score = score - 25
+        end
+    elseif Ball_s3[2] &lt;= 0.275 and Ball_s3[2] &gt;= 0.23 and Ball_s3[3] &gt;= 0.17 then
+        if Ball_s3[1] &gt;= -0.735 and Ball_s3[1] &lt;= -0.645 then
+            score = score - 25
+        elseif Ball_s3[1] &gt;= 0.22 and Ball_s3[1] &lt;= 0.315 then
+            score = score - 25
+        end
+    end
+end
+function stars()
+    if score &gt;= 8500 then
+        star = star + 1
+        score = score - 6000
+        print('Level UP!')
+    end
+end
+function stay()
+    if Ball_s[1] &lt;= 0.35 and Ball_s[2] &gt;= -0.3 and Ball_s[3] &gt;= 0.08 then
+        score = score + 0.1
+    elseif Ball_s1[1] &lt;= 0.35 and Ball_s1[2] &gt;= -0.3 and Ball_s1[3] &gt;= 0.08 then
+        score = score + 0.5
+    elseif Ball_s2[1] &lt;= 0.35 and Ball_s2[2] &gt;= -0.3 and Ball_s2[3] &gt;= 0.08 then
+        score = score + 0.125
+    elseif Ball_s3[1] &lt;= 0.35 and Ball_s3[2] &gt;= -0.3 and Ball_s3[3] &gt;= 0.08 then
+        score = score + 0.25
+    elseif Ball_s[1] &lt;= 0.35 and Ball_s[2] &gt;= -0.3 and Ball_s[3] &gt;= 0.08 and Ball_s1[1] &lt;= 0.35 and Ball_s1[2] &gt;= -0.3 and Ball_s1[3] &gt;= 0.08 then
+        score = score + 3
+    elseif Ball_s[1] &lt;= 0.35 and Ball_s[2] &gt;= -0.3 and Ball_s[3] &gt;= 0.08 and Ball_s3[1] &lt;= 0.35 and Ball_s3[2] &gt;= -0.3 and Ball_s3[3] &gt;= 0.08 then
+        score = score + 1
+    elseif Ball_s[1] &lt;= 0.35 and Ball_s[2] &gt;= -0.3 and Ball_s[3] &gt;= 0.08 and Ball_s2[1] &lt;= 0.35 and Ball_s2[2] &gt;= -0.3 and Ball_s2[3] &gt;= 0.08 then
+        score = score + 2
+    elseif Ball_s1[1] &lt;= 0.35 and Ball_s1[2] &gt;= -0.3 and Ball_s1[3] &gt;= 0.08 and Ball_s2[1] &lt;= 0.35 and Ball_s2[2] &gt;= -0.3 and Ball_s2[3] &gt;= 0.08 then
+        score = score + 5
+    elseif Ball_s1[1] &lt;= 0.35 and Ball_s1[2] &gt;= -0.3 and Ball_s1[3] &gt;= 0.08 and Ball_s3[1] &lt;= 0.35 and Ball_s3[2] &gt;= -0.3 and Ball_s3[3] &gt;= 0.08 then
+        score = score + 6
+    elseif Ball_s2[1] &lt;= 0.35 and Ball_s2[2] &gt;= -0.3 and Ball_s2[3] &gt;= 0.08 and Ball_s3[1] &lt;= 0.35 and Ball_s3[2] &gt;= -0.3 and Ball_s3[3] &gt;= 0.08 then
+        score = score + 4
+    elseif Ball_s[1] &lt;= 0.35 and Ball_s[2] &gt;= -0.3 and Ball_s[3] &gt;= 0.08 and Ball_s1[1] &lt;= 0.35 and Ball_s1[2] &gt;= -0.3 and Ball_s1[3] &gt;= 0.08 and Ball_s2[1] &lt;= 0.35 and Ball_s2[2] &gt;= -0.3 and Ball_s2[3] &gt;= 0.08 then
+        score = score + 8
+    elseif Ball_s[1] &lt;= 0.35 and Ball_s[2] &gt;= -0.3 and Ball_s[3] &gt;= 0.08 and Ball_s1[1] &lt;= 0.35 and Ball_s1[2] &gt;= -0.3 and Ball_s1[3] &gt;= 0.08 and Ball_s3[1] &lt;= 0.35 and Ball_s3[2] &gt;= -0.3 and Ball_s3[3] &gt;= 0.08 then
+        score = score + 9
+    elseif Ball_s[1] &lt;= 0.35 and Ball_s[2] &gt;= -0.3 and Ball_s[3] &gt;= 0.08 and Ball_s2[1] &lt;= 0.35 and Ball_s2[2] &gt;= -0.3 and Ball_s2[3] &gt;= 0.08 and Ball_s3[1] &lt;= 0.35 and Ball_s3[2] &gt;= -0.3 and Ball_s3[3] &gt;= 0.08 then
+        score = score + 7
+    elseif Ball_s1[1] &lt;= 0.35 and Ball_s1[2] &gt;= -0.3 and Ball_s1[3] &gt;= 0.08 and Ball_s2[1] &lt;= 0.35 and Ball_s2[2] &gt;= -0.3 and Ball_s2[3] &gt;= 0.08 and Ball_s3[1] &lt;= 0.35 and Ball_s3[2] &gt;= -0.3 and Ball_s3[3] &gt;= 0.08 then
+        score = score + 10
+    elseif Ball_s[1] &lt;= 0.35 and Ball_s[2] &gt;= -0.3 and Ball_s[3] &gt;= 0.08 and Ball_s1[1] &lt;= 0.35 and Ball_s1[2] &gt;= -0.3 and Ball_s1[3] &gt;= 0.08 and Ball_s2[1] &lt;= 0.35 and Ball_s2[2] &gt;= -0.3 and Ball_s2[3] &gt;= 0.08 and Ball_s3[1] &lt;= 0.35 and Ball_s3[2] &gt;= -0.3 and Ball_s3[3] &gt;= 0.08 then
+        score = score + 15
+    end
+end
+
+function buff()
+    if Ball2_died &gt;= 2 then
+        sim.setObjectPosition(Ball2,-1,{0.4058, -0.39168, 0.08596})
+        Ball2_died = 0
+        Ball2_died_1 = Ball2_died_1 +1
+    elseif Ball2_died_1 &gt;= 2 then
+        sim.setObjectPosition(Ball3,-1,{0.4058, -0.39168, 0.08596})
+        Ball2_died_1 = 0
+        Ball2_died_2 = Ball2_died_2 +1
+    elseif Ball2_died_2 &gt;= 2 then
+        Ball2_died_2 = 0
+        Ball2_died_3 = Ball2_died_3 +1
+        sim.setObjectPosition(Ball1,-1,{0.4058, -0.39168, 0.08596})
+    end
+end
+</pre>
+<p>目前功能 :</p>
+<p>紅色區塊 : +分區塊。<br/>橘色區塊 : 初期+分區塊。<br/>黃色區塊 : +分區塊且多一顆黃球子球。<br/>綠色區塊 : 藍色母球若掉進去且分數少於2500分則分數+1000分，相反之，如果大於3000分則-500分，子球則只有-分。<br/>藍色區塊 : 初期+分區塊。<br/>紫色區塊 : 藍色母球若掉進去且分數大於2500分則-2500分且復活，相反之，若小於則遊戲結束。子球掉下去則-500分、白色和黃色子球則-250分，且皆消失。<br/>棕色區塊 : -分區塊，且若是藍色母球經過則全部子球消失。<br/>白色區塊 : +分區塊且多一顆白色子球。<br/>黑色區塊 : +分區塊且多一顆黑球子球。</p>
+<p>藍色母球 : 恩，就母球<br/>黑球子球 : 分數乘2倍<br/>白色子球 : 質量較輕、容易取得、死亡獎勵<br/>黃球子球 : 死球時若分數大於5000則-1000分並復活，若小於則+1000</p>
+<p>由於加分時以時間累積而非次數累積，所以每次於同色塊+分時都不同，白色區塊刷分可快速刷分。<br/>若藍色母球死亡時，場上還有子球則可繼續遊玩若分數大於0分則母球復活。</p>
+<p>包含死亡獎勵、商店系統、等級制以及常駐獎勵</p>
+<p>死亡獎勵 : 死球兩次產生一次白球、死球四次產生一次黃球、死球八次產生一次黑球，但只限於白球。<br/>商店系統 : 分數到達一定值可購買各子球，白球:1000分、黃球:2500分、黑球:5000分。<br/>等級制 : 分數到達8500時升等並給予升等獎勵2500分(分數重2500開始重算)<br/>常駐獎勵 : 各球於場上同時存在且運動時給予加分(每秒增加)</p>
+<p>每次一種顏色最多一顆，而按鍵為{a}、{l}、{r}、{↑}、{1}、{2}、{3}<br/>{a} : 左邊擊球桿<br/>{l} : 右邊擊球桿<br/>{↑} : 發球<br/>{r} : 重新開始<br/>{1} : 購買一顆黑球<br/>{2} : 購買一顆白球<br/>{3} : 購買一顆黃球</p>
+<p>建議遊玩時按兩次烏龜。此影片將展示全色塊功能。</p><br />Vrep手足球-注意事項 << <a href='Vrep手足球-注意事項.html'>Previous</a> </section></div></body></html>

@@ -80,7 +80,7 @@ $(function(){
 <p>改版Save as 按鈕成可用code , 並可直接存成.txt檔案</p>
 <p><img alt="" height="651" src="./../images/save.png" width="734"/></p>
 <p>之後利用<a href="https://www.pyinstaller.org/downloads.html"><strong>pyinstaller(官方下載說明頁面)</strong></a>測試看看能否轉py成exe檔案 , 但是明顯的出了幾個bug</p>
-<p>(1) cffi 過舊或是未安裝 ---&gt;需更新檔案----&gt;pip cffi 就可以了     ( 沒記錯的話</p>
+<p>(1) cffi 過舊或是未安裝 ---&gt;需更新檔案----&gt;pip cffi 就可以了     ( 沒記錯的話</p>
 <p>(2)接下來是下方這個 , 黑窗表示 : 語法錯誤</p>
 <p><img alt="" height="506" src="./../images/error.png" width="974"/></p>
 <p>上網查後發現是下方這個.py檔的198行的空白行的問題...</p>
@@ -90,7 +90,7 @@ $(function(){
 <p>之後就可正常用行囉 , pyinstaller會生成很多檔案而主要的exe檔在dist資料夾中</p>
 <p><img alt="" height="330" src="./../images/fix.png" width="1000"/></p>
 <p>之後到要轉檔的目錄位置打</p>
-<p>pyinstaller -F -w -i 圖.ico 主程式.py -p 其餘程式 -p 其餘程式  -p 其餘程式  -p 其餘程式  </p>
+<p>pyinstaller -F -w -i 圖.ico 主程式.py -p 其餘程式 -p 其餘程式  -p 其餘程式  -p 其餘程式  </p>
 <p class="graf graf--h4 graf-after--pre" id="31fc" name="31fc">以下為pyinstaller常用參數介紹</p>
 <ol class="postList">
 <li class="graf graf--li graf-after--h4" id="3682" name="3682">pyinstaller -h 來查看參數</li>
